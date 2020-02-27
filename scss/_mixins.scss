@@ -1,0 +1,126 @@
+@mixin font($fz, $c, $fw: inherit, $ff: inherit, $lh: inherit, $fs: inherit) {
+    font-family: $ff;
+    font-weight: $fw;
+    line-height: $lh;
+    font-style: $fs;
+    font-size: $fz;
+    color: $c;
+}
+
+@mixin tr {
+    transition: all .4s ease-in;
+}
+
+@mixin hover {
+    @include tr();
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+
+@mixin pCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin desktop {
+    @media screen and (max-width: 1200px) {
+         @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+      @content;
+    }
+  }
+  
+ @mixin tablets {
+     @media screen and (max-width: $tablets) {
+      @content;
+    }
+  }
+  
+ @mixin phones {
+    @media screen and (max-width: $phones) {
+      @content;
+    }
+  }
+
+
+ @mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+  }
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+  }
+
+@mixin btns { 
+  // .blob-btn {
+	//   display: block;
+	//   border: $b-size solid $text-dark;
+	//   outline: none;
+  //   width: 19rem;
+	//   min-width: 19rem;
+  //   @include font(1.4rem, $text-dark, 400, $btn-ff, 1.2);
+	//   text-align: center;
+	//   text-decoration: none;
+  //   text-transform: uppercase;
+  //   padding: 15px 10px;
+  //   margin-bottom: 6rem;
+ 
+    // @include hover {
+    //   border: $b-size solid $text-data;
+    //   background-color: $text-data;
+    //   color: $text-light;
+    // }
+}
+	
+
+@mixin title1 {
+    @include font(8rem, $text-light, 700, $text-ff, 1.2);
+    margin: 0;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+@mixin title2 {
+  @include font(4.4rem, $text-dark, 700, $text-ff, 1.2);
+  text-transform: uppercase;
+ 
+}
+
+@mixin title3 {
+  @include font(2.2rem, $text-dark, 400, $btn-ff, 1.3);
+   text-transform: uppercase;
+}
+
+@mixin subTitle-light {
+   @include font(1.8rem, $text-light, 400, $btn-ff, 1.4);
+}
+
+@mixin subTitle-dark {
+    @include font(1.8rem, $text-dark, 400, $btn-ff, 1.4);
+}
+
+@mixin parag {
+  @include font(1.8rem, $text-dark, 400, $parag-ff, 1.5);
+}
+
+@mixin location {
+  @include font(1.8rem, $text-dark, 400, $parag-ff, 1.4);
+  font-style: italic;
+}
+
