@@ -87,6 +87,21 @@
     //   color: $text-light;
     // }
 }
+
+@mixin line {
+  @include pseudo;
+  width: 10rem;
+  height: 2px;
+  top: 10rem;
+  left: calc(100% / 2 - 5rem);
+  opacity: .6;
+  @include tablets {
+    top: 6rem;
+    @include phones {
+      top: 5rem;
+    }
+}
+}
 	
 
 @mixin title1 {
@@ -94,33 +109,75 @@
     margin: 0;
     letter-spacing: 10px;
     text-transform: uppercase;
+    white-space: nowrap;
+    @include laptop {
+      font-size: 6.5rem;
+      letter-spacing: 4px;
+    }
+    @include tablets {
+      font-size: 4.5rem;
+      letter-spacing: 1px;
+    }
+    @include phones {
+      font-size: 3.5rem;
+   }
 }
 
 @mixin title2 {
   @include font(4.4rem, $text-dark, 700, $text-ff, 1.2);
   text-transform: uppercase;
+  @include laptop {
+    font-size: 3.6rem;
+  }
+  @include tablets {
+    font-size: 2.8rem;
+  }
+  @include phones {
+    font-size: 2rem;
+}
  
 }
 
 @mixin title3 {
-  @include font(2.2rem, $text-dark, 400, $btn-ff, 1.3);
+  @include font(2.2rem, $text-dark, 400, $btn-ff, 1.2);
    text-transform: uppercase;
+   @include laptop {
+    font-size: 2rem;
+  }
+  @include tablets {
+    font-size: 2rem;
+  }
+  @include phones {
+    font-size: 1.8rem;
+}
 }
 
 @mixin subTitle-light {
    @include font(1.8rem, $text-light, 400, $btn-ff, 1.4);
+   @include tablets {
+     font-size: 1.6rem;
+   }
 }
 
 @mixin subTitle-dark {
     @include font(1.8rem, $text-dark, 400, $btn-ff, 1.4);
+    @include tablets {
+      font-size: 1.6rem;
+    }
 }
 
 @mixin parag {
   @include font(1.8rem, $text-dark, 400, $parag-ff, 1.5);
+  @include tablets {
+    font-size: 1.6rem;
+  }
 }
 
 @mixin location {
   @include font(1.8rem, $text-dark, 400, $parag-ff, 1.4);
   font-style: italic;
+  @include tablets {
+    font-size: 1.6rem;
+  }
 }
 

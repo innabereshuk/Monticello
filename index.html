@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Access-Control-Allow-Origin" content="*" />
+    <meta name="Access-Control-Allow-Headers" content="*" />
     <title>Monticello</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/slick/slick.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+    <script src="js/maps.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="modernizr.min.js"></script>
 </head>
 <body>
 
@@ -62,37 +66,47 @@
             <div class="slider slick-vertical slick-track">
                 <div class="slide" style="background-image: url(image/bg1.png);">
                     <div class="container">
-                        <h1>Simple & mordern</h1>
-                        <p>We make the world's beautiful every day</p>
+                        <div class="slide__text">
+                            <h1>Simple & mordern</h1>
+                            <p>We make the world's beautiful every day</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="slide" style="background-image: url(image/bg1_2.png);">
                     <div class="container">
-                        <h1>Simple & mordern</h1>
-                        <p>We make the world's beautiful every day</p>
+                        <div class="slide__text">
+                            <h1>Simple & mordern</h1>
+                            <p>We make the world's beautiful every day</p>
+                        </div>
                      </div>
                     </div>
                     
                     
                     <div class="slide" style="background-image: url(image/bg1_3.png);">
                         <div class="container">
-                            <h1>Simple & mordern</h1>
-                            <p>We make the world's beautiful every day</p>
+                            <div class="slide__text">
+                                <h1>Simple & mordern</h1>
+                                <p>We make the world's beautiful every day</p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="slide" style="background-image: url(image/bg1_4.png);">
                         <div class="container">
-                            <h1>Simple & mordern</h1>
-                            <p>We make the world's beautiful every day</p>
+                            <div class="slide__text">
+                                <h1>Simple & mordern</h1>
+                                <p>We make the world's beautiful every day</p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="slide" style="background-image: url(image/bg1_5.png);">
                         <div class="container">
-                            <h1>Simple & mordern</h1>
-                            <p>We make the world's beautiful every day</p>
+                            <div class="slide__text">
+                                <h1>Simple & mordern</h1>
+                                <p>We make the world's beautiful every day</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -653,20 +667,96 @@
              <a href="" class="btn">see more<div class="mask"></div></a>
          </div>
      </section>
-     <section></section>
-</main>
-<footer></footer>
+
+     <section class="section section-maps"> 
+         <div id="map"></div>
+        </section>
+
+    <section></section>
+
+    </main>
+    
+    <footer style="background-image: url(image/bg3.png), linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);">
+        
+            <div class="contacted">
+                <h2>get in touch</h2>
+                <div class="wrapper">
+                    <div class="contact">
+                        <a href="" class="contact__link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>91 Nolan Extensions Suite 670</span>
+                        </a>
+                        <a href="" class="contact__link">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>+001 356-868-2454</span>
+                        </a>
+                        <a href="" class="contact__link">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>gahuy93@gmail.com</span>
+                        </a>
+                        <a href="" class="contact__link">
+                            <i class="far fa-clock"></i>
+                            <span>From 07:05AM to 19:30PM</span>
+                        </a>
+                    </div>
+                    <form class="form" action="#" method="POST">
+                        <input type="text" name="username" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <button type="submit" name="send" value="submit" class="btn">Submit
+                            <div class="mask"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+       
+           
+            
+        
+        <div class="footer">
+            <div class="container">
+               <div class="box">
+                    <a href="#" class="logo">
+                         <img src="image/Logo.png" alt="Logo">
+                     </a>
+                    <ul class="socials">
+                        <li class="social">
+                             <a href="" class="social__link">
+                                 <i class="fab fa-facebook-f"></i>
+                             </a>
+                        </li>
+                        <li class="social">
+                             <a href="" class="social__link">
+                                <i class="fab fa-twitter"></i>
+                             </a>
+                         </li>
+                        <li class="social">
+                             <a href="" class="social__link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                         </li>
+                    </ul>
+               </div>
+               <div class="copy">
+                   <span class="copyright">Copyrights &copy; 2017 Monticello</span>
+                   <span class="made">Made with &hearts; by Ga Huy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 
 
     
-    <script>
+<script>
+
        $(document).ready(function(){
             $('.slider').slick({
             vertical: true,
             verticalSwiping: true,
             slidesToShow: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 4000,
             infinite: true,
             dots: true,
             slidesToScroll: 1,
@@ -674,27 +764,14 @@
         });
     });
 
+</script>
 
-    // $(document).ready(function(){
-    //         $('.slider-horizontal').slick({
-    //         vertical: false,
-    //         verticalSwiping: false,
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1,
-    //         autoplay: true,
-    //         autoplaySpeed: 3000,
-    //         infinite: true,
-    //         dots: true,
-           
-    //     });
-    // });
-
-
- </script>
 
    
-    <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
-   
+<script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRL-a7eO0tyFj81gVMmDMOoKYfRH1mCyI&callback=initMap"
+async defer></script>
+
 
    
 </body>
