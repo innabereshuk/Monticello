@@ -1,23 +1,36 @@
+// Блок социальных сетей
+
 .socials {
-    padding: 0;
+    display: flex;
+    @include laptop {
+        margin: 0;
+    }
 }
+
 .social {
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 10px;
+    flex: 0 1 33.33%;
     &__link {
         display: inline-block;
         text-decoration: none;
-        color: $title-color;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        border: 2px solid $title-color;
+        color: $text-light;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        border: 2px solid $text-light;
         border-radius: 50%;
-        opacity: .6;
+        opacity: .8;
+        border: $b-size solid $text-light;
         text-align: center;
-       @include hover {
-           color: white;
-           background-color: $title-color;
+        @include hover {
+           color: $text-data;
+           background-color: $text-light;
+           border: $b-size solid $text-light;
+           box-shadow: 1px 1px 5px 0 rgba(3, 3, 3, 0.5);
+       }
+       i  {
+           font-size: 20px;
        }
     }
 }
