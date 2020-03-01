@@ -4,7 +4,7 @@
     vertical: true,
     verticalSwiping: true,
     slidesToShow: 1,
-    autoplay: true,
+    // autoplay: true,
     speed: 400,
     arrows: false,
     autoplaySpeed: 4000,

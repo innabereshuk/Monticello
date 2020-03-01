@@ -249,7 +249,8 @@ nav {
    flex-direction: column;
    @include phones {
       visibility: hidden;
-   }
+}
+   
 }
 .slick-dots li {
     width: 40px;
