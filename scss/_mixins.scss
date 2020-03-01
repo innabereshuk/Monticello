@@ -96,12 +96,10 @@
   left: calc(100% / 2 - 5rem);
   opacity: .6;
   @include tablets {
-    top: 6rem;
-    // @include phones {
-    //   top: 5rem;
-    // }
-}
-}
+    width: 7rem;
+    left: calc(100% / 2 - 3.5rem);
+  }
+ }
 	
 
 @mixin title1 {

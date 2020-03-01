@@ -43,9 +43,8 @@ nextArrow: `<button class="mySlider__arrow mySlider__arrow--next">
         breakpoint: 680,
         settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-           slidesToShow: 1
+            slidesToShow: 1,
+            slidesToScroll: 2,
         }
     },
    

@@ -604,9 +604,6 @@ nav {
   display: flex; }
   @media screen and (max-width: 1000px) {
     .socials {
-      margin: 0 auto; } }
-  @media screen and (max-width: 500px) {
-    .socials {
       margin: 0; } }
 
 .social {
@@ -785,7 +782,11 @@ nav {
     background-color: #2c4058; }
     @media screen and (max-width: 800px) {
       .section-whatWeDo::before {
-        top: 6rem; } }
+        width: 7rem;
+        left: calc(100% / 2 - 3.5rem); } }
+    @media screen and (max-width: 800px) {
+      .section-whatWeDo::before {
+        top: 7rem; } }
 
 h2:first-child {
   margin-top: 4rem; }
@@ -970,15 +971,11 @@ h2:first-child {
       top: 10rem;
       left: calc(100% / 2 - 5rem);
       opacity: .6;
-      background-color: #ffffff;
-      z-index: 3;
-      top: 13rem; }
+      background-color: #ffffff; }
       @media screen and (max-width: 800px) {
         .section-latest h2::before {
-          top: 6rem; } }
-      @media screen and (max-width: 500px) {
-        .section-latest h2::before {
-          top: 10rem; } }
+          width: 7rem;
+          left: calc(100% / 2 - 3.5rem); } }
 
 .flex {
   display: -webkit-box;
@@ -1314,7 +1311,11 @@ h2:first-child {
       top: 14rem; }
       @media screen and (max-width: 800px) {
         .section-gallery h2::before {
-          top: 6rem; } }
+          width: 7rem;
+          left: calc(100% / 2 - 3.5rem); } }
+      @media screen and (max-width: 800px) {
+        .section-gallery h2::before {
+          top: 8rem; } }
   .section-gallery .btn {
     margin: 0 auto; }
 
@@ -1574,7 +1575,8 @@ h2:first-child {
       z-index: 3; }
       @media screen and (max-width: 800px) {
         .contacted h2::before {
-          top: 6rem; } }
+          width: 7rem;
+          left: calc(100% / 2 - 3.5rem); } }
 
 .wrapper {
   display: -webkit-box;
@@ -1710,6 +1712,9 @@ footer {
     padding: 20rem 1.5rem;
     width: 77rem;
     max-width: 93%; }
+    @media screen and (max-width: 800px) {
+      footer .container {
+        padding: 20rem 1.5rem 15rem; } }
 
 .box {
   display: -webkit-box;

@@ -249,10 +249,7 @@ nav {
 .socials {
     display: flex;
     @include laptop {
-        margin: 0 auto;
-    }
-    @include phones {
-       margin: 0;
+        margin: 0;
     }
 }
 
@@ -409,6 +406,9 @@ nav {
     &::before {
             @include line;
             background-color: $text-dark;
+            @include tablets {
+                top: 7rem;
+            }
         }
     }
     h2 {
@@ -565,11 +565,6 @@ nav {
         &::before {
             @include line;
             background-color: $text-light;
-            z-index: 3;
-            top: 13rem;
-            @include phones {
-                top: 10rem;
-            }
          }
      }
 }    
@@ -809,6 +804,9 @@ nav {
             background-color: $text-dark;
             z-index: 3;
             top: 14rem;
+            @include tablets {
+                top: 8rem;
+            }
         }
     }
     .btn {
@@ -1177,9 +1175,12 @@ footer {
     background-repeat: no-repeat;
     background-position: center top;
         .container {
-        padding: 20rem 1.5rem; 
-        width: 77rem;
-        max-width: 93%;
+           padding: 20rem 1.5rem; 
+           width: 77rem;
+           max-width: 93%;
+           @include tablets{
+              padding: 20rem 1.5rem 15rem; 
+           }
     }
 }
 
