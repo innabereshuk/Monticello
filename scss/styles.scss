@@ -1308,6 +1308,10 @@ footer {
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+    @include phones {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
   }
   .menu__list:hover {
     background-color: rgba(176, 176, 251, .7);
