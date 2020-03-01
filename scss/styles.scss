@@ -169,16 +169,12 @@ nav {
     -ms-flex-item-align: center;
     align-items: center;
     padding: 5.5rem 1.5rem;
-   @include tablets {
+    @include tablets {
         flex-direction: column;
+        align-items: flex-start
     }
 }
 
-.logo {
-    @include phones {
-        margin-left: -10rem;
-    }
-}
 
 .menu {
     display: -ms-flexbox;
@@ -256,7 +252,7 @@ nav {
         margin: 0 auto;
     }
     @include phones {
-       display: none;
+       margin: 0;
     }
 }
 
@@ -338,6 +334,9 @@ nav {
    left: 95%; 
    display: flex;
    flex-direction: column;
+   @include phones {
+       display: none;
+   }
 }
 .slick-dots li {
     width: 40px;
@@ -395,6 +394,7 @@ nav {
     padding: 10px;
     @include hover {
         background-color: $text-light;
+        box-shadow: 1px 1px 5px 0 rgba(3, 3, 3, 0.5);
         opacity: .7;
         .cls-2  {
            fill: $text-data;
@@ -421,6 +421,9 @@ nav {
     display: flex;
     margin: 17rem 0 4rem;
     flex-direction: column;
+    @include phones {
+        margin: 10rem 0 4rem;
+    }
 }
 
 .infoBlock {
@@ -440,15 +443,18 @@ nav {
             box-shadow: -216px -70px 0 #55B7FF;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
             filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=135, Color=#55B7FF); /*IE 5.5-7*/
             @include laptop {
-                box-shadow: none;
-                box-shadow: -216px -70px 0 #55B7FF;
+                box-shadow: -186px -50px 0 #55B7FF;
               
             }
             @include tablets {
-                width: 55%;
+                width: 70%;
                 left: 0;
-                box-shadow: 156px -70px 0 #55B7FF;
+                box-shadow: 156px -50px 0 #55B7FF;
             }
+            @include phones {
+                box-shadow: 126px -70px 0 #7E5AFF;
+             
+           }
         }
     }
     &:nth-child(2) {
@@ -463,14 +469,17 @@ nav {
             box-shadow: 216px -70px 0 #7E5AFF;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
             filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=135, Color=#7E5AFF); /*IE 5.5-7*/
             @include laptop {
-                box-shadow: none;
-                box-shadow: -216px -70px 0 #7E5AFF;
+                box-shadow: -186px -50px 0 #7E5AFF;
               
             }
             @include tablets {
-                width: 55%;
+                width: 70%;
                left: 0;
-                box-shadow: 156px -70px 0 #7E5AFF;
+                box-shadow: 156px -50px 0 #7E5AFF;
+            }
+            @include phones {
+                 box-shadow: 126px -70px 0 #7E5AFF;
+              
             }
         }
     }
@@ -493,9 +502,18 @@ nav {
             @include tablets {
                 padding: 5rem 6.5rem 5rem 0;
             }
+            @include phones {
+                padding: 5rem 0;
+            }
         }
         &--left {
             padding: 5rem 6.5rem 5rem 0;
+            @include tablets {
+                padding: 5rem 6.5rem 5rem 0;
+            }
+            @include phones {
+                padding: 5rem 0;
+            }
         }
         p {
             @include parag;
@@ -539,7 +557,7 @@ nav {
     background-position: center;
     position: relative;
     .container {
-       padding: 13rem 1.5rem 20rem;
+       padding: 10rem 1.5rem 13rem;
     }
     h2 {
         color: $text-light;
@@ -549,6 +567,9 @@ nav {
             background-color: $text-light;
             z-index: 3;
             top: 13rem;
+            @include phones {
+                top: 10rem;
+            }
          }
      }
 }    
@@ -603,7 +624,9 @@ nav {
                 padding: 1rem 0;
                 max-height: 10.6rem;
                 overflow: hidden;
-                
+                @include phones {
+                    font-size: 1.8rem;
+                }
             }
             &__author-link {
                 position: absolute;
@@ -663,6 +686,9 @@ nav {
     text-align: center;
     margin: 0;
     padding: 0;
+    @include phones {
+        left: 30%;
+    }
 }
  .slick-dots-two li {
      width: 20px;
@@ -1239,6 +1265,7 @@ footer {
     width: 100%;
     height: 2px;
     background-color: $text-light;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
   }
   .menu__btn > span::before {
     content: '';
@@ -1259,10 +1286,10 @@ footer {
     width: 300px;
     height: 100%;
     margin: 0;
-    padding: 120px 0;
+    padding: 150px 0;
     list-style: none;
     text-align: center;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(58, 55, 55, 0.7);
     box-shadow: 1px 2px 6px rgba(0, 0, 0, .2);
   }
  
@@ -1270,7 +1297,7 @@ footer {
     display: block;
     padding: 12px 24px;
     @include subTitle-light;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -1278,21 +1305,21 @@ footer {
     background-color: rgba(176, 176, 251, .7);
   }
 
-//   #menu__toggle:checked ~ .menu__btn > span {
-//     transform: rotate(45deg);
-//   }
-//   #menu__toggle:checked ~ .menu__btn > span::before {
-//     top: 0;
-//     transform: rotate(0);
-//   }
-//   #menu__toggle:checked ~ .menu__btn > span::after {
-//     top: 0;
-//     transform: rotate(90deg);
-//   }
-//   #menu__toggle:checked ~ .menu__box {
-//     visibility: visible;
-//     right: 0;
-//   }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
 
 .menu__btn > span,
 .menu__btn > span::before,
