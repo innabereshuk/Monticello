@@ -2,12 +2,11 @@
      let map, marker, infoWindow;
 
      function initMap() {
-
-        
-    let mapCenter = {lat:  40.685553, lng: -73.891121};
+            
+    let mapCenter = {lat: 43.271023, lng: -73.657880 };
         map = new google.maps.Map(document.getElementById('map'), {
         center: mapCenter,
-        zoom: 11,
+        zoom: 10,
         mapTypeId: 'roadmap'
         });
 

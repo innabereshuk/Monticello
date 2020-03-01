@@ -7,7 +7,7 @@
     <meta name="Access-Control-Allow-Origin" content="*" />
     <meta name="Access-Control-Allow-Headers" content="*" />
     <title>Monticello</title>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/slick/slick.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
@@ -23,18 +23,32 @@
                 <a href="#" class="logo">
                     <img src="image/Logo.png" alt="Logo">
                 </a>
-                <ul class="menu">
+
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="menu__box">
+                      <li><a class="menu__list" href="#About_Us">About Us</a></li>
+                      <li><a class="menu__list" href="#projects">projects</a></li>
+                      <li><a class="menu__list" href="#news">news</a></li>
+                      <li><a class="menu__list" href="#contact">contact</a></li>
+                    </ul>
+                  </div>
+
+                <ul class="menu" id="menu">
                     <li class="menu__item left">
-                      <a href="#" class="menu__link">About Us</a>
+                      <a href="#About_Us" class="menu__link">About Us</a>
                     </li>
                     <li class="menu__item left">
-                      <a href="#" class="menu__link">projects</a>
+                      <a href="#projects" class="menu__link">projects</a>
                     </li>
                     <li class="menu__item left">
-                      <a href="#" class="menu__link">news</a>
+                      <a href="#news" class="menu__link">news</a>
                     </li>
                     <li class="menu__item left">
-                      <a href="#" class="menu__link">contact</a>
+                      <a href="#contact" class="menu__link">contact</a>
                     </li>
                 </ul>
 
@@ -45,7 +59,7 @@
                         </a>
                     </li>
                     <li class="social">
-                        <a href="" class="social__link">
+                        <a href="" target="_blank" class="social__link">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
@@ -62,7 +76,7 @@
 
     <main>
 
-       <section class="section section__cover">
+        <section class="section section__cover">
             <div class="slider slick-vertical slick-track">
                 <div class="slide" style="background-image: url(image/bg1.png);">
                     <div class="container">
@@ -73,7 +87,7 @@
                     </div>
                 </div>
                 
-                <div class="slide" style="background-image: url(image/bg1_2.png);">
+                <div class="slide" style="background-image: url(image/bg1_4.png);">
                     <div class="container">
                         <div class="slide__text">
                             <h1>Simple & mordern</h1>
@@ -83,7 +97,7 @@
                     </div>
                     
                     
-                    <div class="slide" style="background-image: url(image/bg1_3.png);">
+                    <div class="slide" style="background-image: url(image/bg1.png);">
                         <div class="container">
                             <div class="slide__text">
                                 <h1>Simple & mordern</h1>
@@ -101,7 +115,7 @@
                         </div>
                     </div>
                     
-                    <div class="slide" style="background-image: url(image/bg1_5.png);">
+                    <div class="slide" style="background-image: url(image/bg1.png);">
                         <div class="container">
                             <div class="slide__text">
                                 <h1>Simple & mordern</h1>
@@ -110,13 +124,13 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="scroll"> 
+                <a href="#projects" class="scroll" id="scroll"> 
                     <svg viewbox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#ffffff;}</style></defs><title>arrow-ios-downward</title><g id="Layer_2" data-name="Layer 2"><g id="arrow-ios-downward"><g id="arrow-ios-downward-2" data-name="arrow-ios-downward"><rect class="cls-1" width="24" height="24"/><path class="cls-2" d="M12,16a1,1,0,0,1-.64-.23l-6-5A1,1,0,1,1,6.64,9.23L12,13.71l5.36-4.32a1,1,0,0,1,1.41.15A1,1,0,0,1,18.63,11l-6,4.83A1,1,0,0,1,12,16Z"/></g></g></g></svg>
                 </a>
             </section>
       
                
-        <section class="section section-whatWeDo">
+        <section class="section section-whatWeDo section--bg" id="About_Us">
             <div class="container">
                 <h2>what we do</h2>
                 <div class="wrap">
@@ -129,12 +143,10 @@
                             <h2>Trade Center</h2>
                             <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
                             <a href="#" class="btn">more details<div class="mask"></div></a>
-                            <div class="card">
-                                <a href="" class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </a>
+                           <a href="#map" class="coordinat">
+                                <i class="fas fa-map-marker-alt"></i>
                                 <span>New York City, United States - 1776 feet</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -147,402 +159,76 @@
                             <h2>Commerce Centre</h2>
                             <p>Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
                             <a href="#" class="btn">more details<div class="mask"></div></a>
-                            <div class="card">
-                                <a href="" class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </a>
+                           <a href="#map" class="coordinat">
+                                <i class="fas fa-map-marker-alt"></i>
                                 <span>Hong Kong - 1588 Feet</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-       
-            <!-- <div class="slider-horizontal slick-track">
-
-                <div class="slide1" style="background-image: url(image/bg2.png);">
-                    <div class="container">
-                        <h2>latest news</h2>
-                        <div class="flex">
-                            <div class="flex__item">
-                                <article class="post">
-                                    <a href="#" class="post__link">
-                                        <div class="post__img-wrap">
-                                            <img src="image/latest1.jpg" alt="" class="post__img">
-                                        </div>
-                                        <h3 class="post__title">
-                                            See The Unmatched Beauty Of The Great. Lakes.
-                                        </h3>
-                                        <p>Free directories: directories are perfect for customers that are... searching for a </p>
-                                    </a>
-                                    <a href="#" class="post__author-link">
-                                        <img src="image/autor1.png" alt="Foto-autor">
-                                        <span class="post__name">Isaac Dunn</span>
-                                        <time class="post__date" datetime="2017-02-09">09 Feb 2017</time>
-                                    </a>
-                                </article>
-                            </div> -->
-
-                            <!-- <div class="flex__item">
-                                <article class="post">
-                                    <a href="#" class="post__link">
-                                        <div class="post__img-wrap">
-                                            <img src="image/latest2.jpg" alt="" class="post__img">
-                                        </div>
-                                        <h3 class="post__title">
-                                            Effective Advertising Pointers.
-                                        </h3>
-                                        <p>Having a home based business is a wonderful asset to your life...</p>
-                                    </a>
-                                    <a href="#" class="post__author-link">
-                                        <img src="image/autor2.png" alt="Foto-autor">
-                                        <span class="post__name">Dominic Freeman</span>
-                                        <time class="post__date" datetime="2017-04-24">24 Apr 2017</time>
-                                    </a>
-                                </article>
-                            </div>
-
-                            <div class="flex__item">
-                                <article class="post">
-                                    <a href="#" class="post__link">
-                                        <div class="post__img-wrap">
-                                            <img src="image/latest3.jpg" alt="" class="post__img">
-                                        </div>
-                                        <h3 class="post__title">
-                                            Hypnotize Yourself Into The Ghost.
-                                        </h3>
-                                        <p>There are many things that are important to catalog design....</p>
-                                    </a>
-                                    <a href="#" class="post__author-link">
-                                        <img src="image/autor3.png" alt="Foto-autor">
-                                        <span class="post__name">Alice Ward</span>
-                                        <time class="post__date" datetime="2017-12-30">30 Dec 2017</time>
-                                    </a>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="slide" style="background-image: url(image/bg1_2.png);">
-                    <div class="container">
-                        
-                        <p>We make the world's beautiful every day</p>
-                     </div>
-                </div>
-                                    
-                <div class="slide" style="background-image: url(image/bg1_3.png);">
-                    <div class="container">
-                        <h1>Simple & mordern</h1>
-                        <p>We make the world's beautiful every day</p>
-                    </div>
-                </div>
-
-                <div class="slide" style="background-image: url(image/bg1_2.png);">
-                    <div class="container">
-                        <h1>Simple & mordern</h1>
-                        <p>We make the world's beautiful every day</p>
-                     </div>
-                </div>
-
-                <div class="slide" style="background-image: url(image/bg1_2.png);">
-                    <div class="container">
-                        <h1>Simple & mordern</h1>
-                        <p>We make the world's beautiful every day</p>
-                     </div>
-                </div> -->
-                    
-            <!-- </div> -->
-        
-    <section class="section section-latest">    
-
-       <div class="container-slider">
-
-        <input type="radio" id="i1" name="images" checked/>
-        <input type="radio" id="i2" name="images"/>
-        <input type="radio" id="i3" name="images"/>
-        <input type="radio" id="i4" name="images"/>
-        <input type="radio" id="i5" name="images"/>
-                
-       <div class="slide-img" id="one" style="background-image: url(image/bg2.png);">			
-             <div class="container">
-                <h2>latest news</h2>
-                <div class="flex">
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest1.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    See The Unmatched Beauty Of The Great. 
-                                </h3>
-                                <p>Free directories: directories are perfect for customers that are... searching for </p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor1.png" alt="Foto-autor">
-                                <div class="author">
-                                    <span class="author__name">Isaac Dunn</span>
-                                    <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                        
-                        <div class="flex__item">
-                            <article class="post">
-                                 <a href="#" class="post__link">
-                                    <div class="post__img-wrap">
-                                        <img src="image/latest2.jpg" alt="" class="post__img">
-                                    </div>
-                                    <h3 class="post__title">
-                                        Effective Advertising Pointers.
-                                    </h3>
-                                    <p>Having a home based business is a wonderful asset to your life...</p>
-                                </a>
-                                <a href="#" class="post__author-link">
-                                    <img src="image/autor2.png" alt="Foto-autor">
-                                    <div class="author">
-                                        <span class="author__name">Dominic Freeman</span>
-                                        <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-
-                        <div class="flex__item">
-                            <article class="post">
-                                <a href="#" class="post__link">
-                                    <div class="post__img-wrap">
-                                        <img src="image/latest3.jpg" alt="" class="post__img">
-                                    </div>
-                                    <h3 class="post__title">
-                                        Hypnotize Yourself Into The Ghost.
-                                    </h3>
-                                    <p>There are many things that are important to catalog design....</p>
-                                </a>
-                                <a href="#" class="post__author-link">
-                                    <img src="image/autor3.png" alt="Foto-autor">
-                                    <div class="author">
-                                        <span class="author__name">Alice Ward</span>
-                                        <time class="author__date" datetime="2017-12-30">30 Dec 2017</time>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                </div>
-            </div>
-
-            <label class="prev" for="i5"><i class="fas fa-angle-left"></i></label>
-            <label class="next" for="i2"><i class="fas fa-angle-right"></i></label>	
-         </div>                        
-                                              
-        <div class="slide-img" id="two" style="background-image: url(image/bg1_2.png);">
-                <div class="container">
-                    <h2>latest news</h2>
-                    <div class="flex">
-                        <div class="flex__item">
-                            <article class="post">
-                                <a href="#" class="post__link">
-                                    <div class="post__img-wrap">
-                                        <img src="image/what1.jpg" alt="" class="post__img">
-                                    </div>
-                                    <h3 class="post__title">
-                                        See The Unmatched Beauty Of The Great. Lakes.
-                                    </h3>
-                                    <p>Free directories: directories are perfect for customers that are... searching for</p>
-                                </a>
-                                <a href="#" class="post__author-link">
-                                    <img src="image/autor1.png" alt="Foto-autor">
-                                    <div class="author">
-                                        <span class="author__name">Isaac Dunn</span>
-                                        <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
-                                    </div>
-                                </a>
-                            </article>
-                        </div>
-                            
-                            <div class="flex__item">
-                                <article class="post">
-                                     <a href="#" class="post__link">
-                                        <div class="post__img-wrap">
-                                            <img src="image/what2.jpg" alt="" class="post__img">
-                                        </div>
-                                        <h3 class="post__title">
-                                            Effective Advertising Pointers.
-                                        </h3>
-                                        <p>Having a home based business is a wonderful asset to your life...</p>
-                                    </a>
-                                    <a href="#" class="post__author-link">
-                                        <img src="image/autor2.png" alt="Foto-autor">
-                                        <div class="author">
-                                            <span class="author__name">Dominic Freeman</span>
-                                            <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
-                                        </div >
-                                    </a>
-                                </article>
-                            </div>
     
-                            <div class="flex__item">
-                                <article class="post">
-                                    <a href="#" class="post__link">
-                                        <div class="post__img-wrap">
-                                            <img src="image/gallery1.jpg" alt="" class="post__img">
-                                        </div>
-                                        <h3 class="post__title">
-                                            Hypnotize Yourself Into The Ghost.
-                                        </h3>
-                                        <p>There are many things that are important to catalog design....</p>
-                                    </a>
-                                    <a href="#" class="post__author-link">
-                                        <img src="image/autor3.png" alt="Foto-autor">
-                                        <div class="author">
-                                            <span class="author__name">Alice Ward</span>
-                                            <time class="author__date" datetime="2017-12-30">30 Dec 2017</time>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                    </div>
-                </div>
-                <label class="prev" for="i1"><i class="fas fa-angle-left"></i></label>
-                <label class="next" for="i3"><i class="fas fa-angle-right"></i></label>
-        </div>
-                        
-        <div class="slide-img" id="three" style="background-image: url(image/bg1_2.png);">
+        <section class="section section-latest" id="news" style="background-image: url(image/bg2.png),linear-gradient(209deg, #24CCFA 2%, #3C7FD4 100%);">    
             <div class="container">
-                <h2>latest news</h2>
-                <div class="flex">
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest1.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    See The Unmatched Beauty Of The Great. Lakes.
-                                </h3>
-                                <p>Free directories: directories are perfect for customers that are... searching for</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor1.png" alt="Foto-autor">
-                                <div class="author">
-                                    <span class="author__name">Isaac Dunn</span>
-                                    <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                            
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest2.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    Effective Advertising Pointers.
-                                </h3>
-                                <p>Having a home based business is a wonderful asset to your life...</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor2.png" alt="Foto-autor">
-                               <div class="author">
-                                    <span class="author__name">Dominic Freeman</span>
-                                    <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
+               <h2>latest news</h2>
+               <div class="flex mySlider">
+
+                   <div class="flex__item slide">
+                       <article class="post">
+                           <a href="#" target="_blank" class="post__link">
+                               <div class="post__img-wrap">
+                                   <img data-lazy="image/latest1.jpg" alt="" class="post__img">
                                </div>
-                            </a>
-                        </article>
-                    </div>
-    
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest3.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    Hypnotize Yourself Into The Ghost.
-                                </h3>
-                                <p>There are many things that are important to catalog design....</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor3.png" alt="Foto-autor">
-                                <div class="author">
-                                    <span class="author__name">Alice Ward</span>
-                                    <time class="author__date" datetime="2017-12-30">30 Dec 2017</time>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </div>
-            </div>   
-                        
-            <label class="prev" for="i2"><i class="fas fa-angle-left"></i></label>
-            <label class="next" for="i4"><i class="fas fa-angle-right"></i></label>
-        </div>
-                     
-        <div class="slide-img" id="four" style="background-image: url(image/bg1_4.png);">
-            <div class="container">
-                <h2>latest news</h2>
-                <div class="flex">
-                    <div class="flex__item">
-                        <article class="post">
-                             <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest1.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    See The Unmatched Beauty Of The Great. Lakes.
-                                </h3>
-                                <p>Free directories: directories are perfect for customers that are... searching for</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor1.png" alt="Foto-autor">
-                                <div class="author">
-                                    <span class="author__name">Isaac Dunn</span>
-                                    <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
-                                </div >
-                            </a>
-                        </article>
-                    </div>
-                            
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest2.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    Effective Advertising Pointers.
-                                </h3>
-                                <p>Having a home based business is a wonderful asset to your life...</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor2.png" alt="Foto-autor">
+                               <h3 class="post__title">
+                                   See The Unmatched Beauty Of The Great. 
+                               </h3>
+                               <p>Free directories: directories are perfect for customers that are... searching for </p>
+                           </a>
+                           <a href="#" target="_blank" class="post__author-link">
+                               <img src="image/autor1.png" alt="Foto-autor">
                                <div class="author">
-                                    <span class="author__name">Dominic Freeman</span>
-                                    <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
+                                   <span class="author__name">Isaac Dunn</span>
+                                   <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
                                </div>
+                           </a>
+                       </article>
+                   </div>
+                       
+                    <div class="flex__item slide">
+                        <article class="post">
+                            <a href="#" target="_blank" class="post__link">
+                                <div class="post__img-wrap">
+                                    <img data-lazy="image/latest2.jpg" alt="" class="post__img">
+                                </div>
+                                <h3 class="post__title">
+                                    Effective Advertising Pointers.
+                                </h3>
+                                <p>Having a home based business is a wonderful asset to your life...</p>
+                            </a>
+                            <a href="#" target="_blank" class="post__author-link">
+                                <img src="image/autor2.png" alt="Foto-autor">
+                                <div class="author">
+                                    <span class="author__name">Dominic Freeman</span>
+                                    <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
+                                </div>
                             </a>
                         </article>
                     </div>
     
-                    <div class="flex__item">
+                    <div class="flex__item slide">
                         <article class="post">
-                            <a href="#" class="post__link">
+                            <a href="#" target="_blank" class="post__link">
                                 <div class="post__img-wrap">
-                                    <img src="image/latest3.jpg" alt="" class="post__img">
+                                    <img data-lazy="image/latest3.jpg" alt="" class="post__img">
                                 </div>
                                 <h3 class="post__title">
-                                    Hypnotize Yourself Into The Ghost.
+                                     Hypnotize Yourself Into The Ghost.
                                 </h3>
                                 <p>There are many things that are important to catalog design....</p>
-                            </a>
-                            <a href="#" class="post__author-link">
+                            </a> 
+                            <a href="#" target="_blank" class="post__author-link">
                                 <img src="image/autor3.png" alt="Foto-autor">
                                 <div class="author">
                                     <span class="author__name">Alice Ward</span>
@@ -551,29 +237,19 @@
                             </a>
                         </article>
                     </div>
-                </div>
-            </div>
-            <label class="prev" for="i3"><i class="fas fa-angle-left"></i></label>
-            <label class="next" for="i5"><i class="fas fa-angle-right"></i></label>
-                        
-        </div>
-
-        <div class="slide-img" id="five" style="background-image: url(image/Bg3.png);">
-            <div class="container">
-                <h2>latest news</h2>
-                <div class="flex">
-                    <div class="flex__item">
+    
+                    <div class="flex__item slide">
                         <article class="post">
-                            <a href="#" class="post__link">
+                            <a href="#" target="_blank" class="post__link">
                                 <div class="post__img-wrap">
-                                    <img src="image/latest1.jpg" alt="" class="post__img">
+                                    <img data-lazy="image/latest1.jpg" alt="" class="post__img">
                                 </div>
                                 <h3 class="post__title">
-                                    See The Unmatched Beauty Of The Great. Lakes.
+                                    See The Unmatched Beauty Of The Great.
                                 </h3>
                                 <p>Free directories: directories are perfect for customers that are... searching for</p>
                             </a>
-                            <a href="#" class="post__author-link">
+                            <a href="#" target="_blank" class="post__author-link">
                                 <img src="image/autor1.png" alt="Foto-autor">
                                 <div class="author">
                                     <span class="author__name">Isaac Dunn</span>
@@ -582,68 +258,34 @@
                             </a>
                         </article>
                     </div>
-                            
-                    <div class="flex__item">
-                        <article class="post">
-                            <a href="#" class="post__link">
-                                <div class="post__img-wrap">
-                                    <img src="image/latest2.jpg" alt="" class="post__img">
-                                </div>
-                                <h3 class="post__title">
-                                    Effective Advertising Pointers.
-                                </h3>
-                                <p>Having a home based business is a wonderful asset to your life...</p>
-                            </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor2.png" alt="Foto-autor">
-                              <div class="author">
-                                    <span class="author__name">Dominic Freeman</span>
-                                    <time class="author__date" datetime="2017-04-24">24 Apr 2017</time>
-                              </div>
-                            </a>
-                        </article>
-                    </div>
     
-                    <div class="flex__item">
+                    <div class="flex__item slide">
                         <article class="post">
-                            <a href="#" class="post__link">
+                            <a href="#" target="_blank" class="post__link">
                                 <div class="post__img-wrap">
-                                    <img src="image/latest3.jpg" alt="" class="post__img">
+                                    <img data-lazy="image/latest2.jpg" alt="" class="post__img">
                                 </div>
                                 <h3 class="post__title">
-                                    Hypnotize Yourself Into The Ghost.
+                                    See The Unmatched Beauty Of The Great.
                                 </h3>
-                                <p>There are many things that are important to catalog design....</p>
+                                <p>Free directories: directories are perfect for customers that are... searching for</p>
                             </a>
-                            <a href="#" class="post__author-link">
-                                <img src="image/autor3.png" alt="Foto-autor">
-                               <div class="author">
-                                    <span class="author__name">Alice Ward</span>
-                                    <time class="author__date" datetime="2017-12-30">30 Dec 2017</time>
-                               </div >
+                            <a href="#" target="_blank" class="post__author-link">
+                                <img src="image/autor1.png" alt="Foto-autor">
+                                <div class="author">
+                                    <span class="author__name">Isaac Dunn</span>
+                                    <time class="author__date" datetime="2017-02-09">09 Feb 2017</time>
+                                </div>
                             </a>
                         </article>
                     </div>
-                </div>
-            </div>
-                    
-            <label class="prev" for="i4"><i class="fas fa-angle-left"></i></label>
-            <label class="next" for="i1"><i class="fas fa-angle-right"></i></label>
-        </div>
-            
-        <div id="nav_slide">
-            <label for="i1" class="dots" id="dot1"></label>
-            <label for="i2" class="dots" id="dot2"></label>
-            <label for="i3" class="dots" id="dot3"></label>
-            <label for="i4" class="dots" id="dot4"></label>
-            <label for="i5" class="dots" id="dot5"></label>
-        </div>
-                    
-      </div>
-     </section>
+               </div>
+            </div>                     
+        </section>
+  
 
      
-     <section class="section section-gallery">
+     <section class="section section-gallery section--bg" id="projects">
          <div class="container">
              <h2>gallery</h2>
              <div class="grid">
@@ -664,55 +306,50 @@
                      <img class="grid__img"  src="image/gallery5.jpg" alt="">
                     </div>
              </div>
-             <a href="" class="btn">see more<div class="mask"></div></a>
+             <a href="#" class="btn">see more<div class="mask"></div></a>
          </div>
      </section>
 
-     <section class="section section-maps"> 
+     <section class="section section-maps section--bg"> 
          <div id="map"></div>
         </section>
-
-    <section></section>
 
     </main>
     
     <footer style="background-image: url(image/bg3.png), linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);">
         
-            <div class="contacted">
-                <h2>get in touch</h2>
-                <div class="wrapper">
-                    <div class="contact">
-                        <a href="" class="contact__link">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>91 Nolan Extensions Suite 670</span>
-                        </a>
-                        <a href="" class="contact__link">
-                            <i class="fas fa-phone-volume"></i>
-                            <span>+001 356-868-2454</span>
-                        </a>
-                        <a href="" class="contact__link">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <span>gahuy93@gmail.com</span>
-                        </a>
-                        <a href="" class="contact__link">
-                            <i class="far fa-clock"></i>
-                            <span>From 07:05AM to 19:30PM</span>
-                        </a>
+        <div class="contacted" id="contact">
+            <h2>get in touch</h2>
+            <div class="wrapper">
+                <div class="contact">
+                    <a href="#map" class="contact__link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>91 Nolan Extensions Suite 670</span>
+                    </a>
+                    <a href="tel:+380676218389" class="contact__link">
+                        <i class="fas fa-phone-volume"></i>
+                        <span>+001 356-868-2454</span>
+                    </a>
+                    <a href="mailto:bereshuk-2011@mail.ru" class="contact__link">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>gahuy93@gmail.com</span>
+                    </a>
+                    <a href="#" class="contact__link">
+                        <i class="far fa-clock"></i>
+                        <span>From 07:05AM to 19:30PM</span>
+                    </a>
                     </div>
-                    <form class="form" action="#" method="POST">
-                        <input type="text" name="username" placeholder="Name">
-                        <input type="email" name="email" placeholder="Email">
-                        <button type="submit" name="send" value="submit" class="btn">Submit
-                            <div class="mask"></div>
-                        </button>
-                    </form>
-                </div>
+                <form class="form" action="#" method="POST">
+                    <input type="text" name="username" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <button type="submit" name="send" value="submit" class="btn">Submit
+                        <div class="mask"></div>
+                    </button>
+                </form>
             </div>
-       
-           
-            
-        
-        <div class="footer">
+        </div>
+                            
+       <div class="footer">
             <div class="container">
                <div class="box">
                     <a href="#" class="logo">
@@ -720,17 +357,17 @@
                      </a>
                     <ul class="socials">
                         <li class="social">
-                             <a href="" class="social__link">
+                             <a href="#" target="_blank" class="social__link">
                                  <i class="fab fa-facebook-f"></i>
                              </a>
                         </li>
                         <li class="social">
-                             <a href="" class="social__link">
+                             <a href="#" target="_blank" class="social__link">
                                 <i class="fab fa-twitter"></i>
                              </a>
                          </li>
                         <li class="social">
-                             <a href="" class="social__link">
+                             <a href="#" target="_blank" class="social__link">
                                 <i class="fab fa-instagram"></i>
                             </a>
                          </li>
@@ -744,35 +381,10 @@
         </div>
     </footer>
 
-
-
-
-    
-<script>
-
-       $(document).ready(function(){
-            $('.slider').slick({
-            vertical: true,
-            verticalSwiping: true,
-            slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            infinite: true,
-            dots: true,
-            slidesToScroll: 1,
-           
-        });
-    });
-
-</script>
-
-
-   
+ <script src="js/scripts.js"></script>  
 <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRL-a7eO0tyFj81gVMmDMOoKYfRH1mCyI&callback=initMap"
 async defer></script>
-
-
    
 </body>
 </html>
