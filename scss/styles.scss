@@ -76,54 +76,6 @@ h3 {
     @include title3;
 }
 
-// Кнопки все стиль
-
-.btn {
-	position: relative;
-	display: block;
-	background: none center center no-repeat;
-	background-size: cover;
-    border: $b-size solid $color-btn;
-    opacity: .8;
-    @include font(1.4rem, $color-btn, 400, $btn-ff, 1.2);
-	text-transform: uppercase;
-	letter-spacing: .3rem;
-	padding: 15px 10px;
-	text-align: center;
-	width: 19rem;
-	min-width: 19rem;
-    margin-bottom: 6rem;
-	cursor: pointer;
-	overflow: hidden;
-	-webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
-	transition: border 2s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
-}
-
-.btn .mask {
-	position: absolute;
-    display: block;
-    background: #fff;
-	background: rgba(255,255,255,0.5);
-	width: 200px;
-	height: 100px;
-	transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
-	transition: all 2s cubic-bezier(0.19,1,.22,1);
-}
-
-.btn:hover {
-	border-color: $text-data;
-    color: $text-dark;
-    background-color: $text-data;
-	box-shadow: 0 0 5px rgba(19, 18, 18, 0.8);
-}
-
-.btn:hover .mask {
-    background: $text-light;
-    opacity: .8;
-	transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
-}
-
-
 
 
 .section {
@@ -523,9 +475,9 @@ nav {
             padding: 4rem 0;
 
         }
-        // .btn {
-        //     @include btns;
-        // }
+        .btn {
+            @include btns;
+        }
     }
 }
 
@@ -813,6 +765,7 @@ nav {
         }
     }
     .btn {
+        @include btns;
         margin: 0 auto;
     }
 }
@@ -963,6 +916,7 @@ nav {
             width: 8rem;
             max-width: 8rem;
             max-height: 8rem;
+            opacity: 0;
         }
         
     }
@@ -972,6 +926,12 @@ nav {
         min-width: 100%;
         min-height: 100%;
         object-fit: cover;
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, .5);
+            transform: scale(1.01);
+        }
     }
 }
 
@@ -979,15 +939,14 @@ nav {
 .grid__item:hover img,
 .grid__item:focus img,
 .grid__item:active img {
-        transform: scale(1.01);
-        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, .5);
         @include hover;
     }
 
 .grid__item:hover .count,
 .grid__item:focus .count,
 .grid__item:active .count {
-   opacity: 0;
+   opacity: 1;
+   transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
 }
 
 
@@ -1130,6 +1089,7 @@ nav {
         margin-top: 0;
     }
    .btn{
+       @include btns;
         margin: 4rem 0 0;
         align-self: flex-end;
         width: 14rem;

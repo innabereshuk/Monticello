@@ -414,59 +414,6 @@ h3 {
     h3 {
       font-size: 1.8rem; } }
 
-.btn {
-  position: relative;
-  display: block;
-  background: none center center no-repeat;
-  background-size: cover;
-  border: 2px solid #48596e;
-  opacity: .8;
-  font-family: "Gotham Book";
-  font-weight: 400;
-  line-height: 1.2;
-  font-style: inherit;
-  font-size: 1.4rem;
-  color: #48596e;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-  padding: 15px 10px;
-  text-align: center;
-  width: 19rem;
-  min-width: 19rem;
-  margin-bottom: 6rem;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-transition: border 1s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1); }
-
-.btn .mask {
-  position: absolute;
-  display: block;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.5);
-  width: 200px;
-  height: 100px;
-  -webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-  transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-  -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1); }
-
-.btn:hover {
-  border-color: #55b7ff;
-  color: #2c4058;
-  background-color: #55b7ff;
-  -webkit-box-shadow: 0 0 5px rgba(19, 18, 18, 0.8);
-  box-shadow: 0 0 5px rgba(19, 18, 18, 0.8); }
-
-.btn:hover .mask {
-  background: #ffffff;
-  opacity: .8;
-  -webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
-  transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg); }
-
 .section {
   text-align: center;
   padding: 10rem 0; }
@@ -925,6 +872,55 @@ h2:first-child {
       @media screen and (max-width: 800px) {
         .infoBlock__text p {
           font-size: 1.6rem; } }
+    .infoBlock__text .btn {
+      position: relative;
+      display: block;
+      background: none center center no-repeat;
+      background-size: cover;
+      border: 2px solid #48596e;
+      opacity: .8;
+      font-family: "Gotham Book";
+      font-weight: 400;
+      line-height: 1.2;
+      font-style: inherit;
+      font-size: 1.4rem;
+      color: #48596e;
+      text-transform: uppercase;
+      letter-spacing: .3rem;
+      padding: 15px 10px;
+      text-align: center;
+      width: 19rem;
+      min-width: 19rem;
+      margin-bottom: 6rem;
+      cursor: pointer;
+      overflow: hidden;
+      -webkit-transition: border 1s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      -webkit-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1); }
+      .infoBlock__text .btn .mask {
+        position: absolute;
+        display: block;
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+        width: 200px;
+        height: 100px;
+        -webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+        transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+        -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+        -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 2s cubic-bezier(0.19, 1, 0.22, 1); }
+      .infoBlock__text .btn:hover {
+        border-color: #55b7ff;
+        color: #ffffff;
+        background-color: #55b7ff;
+        -webkit-box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8);
+        box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8); }
+      .infoBlock__text .btn:hover .mask {
+        background: #ffffff;
+        opacity: .8;
+        -webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+        transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg); }
 
 .coordinat {
   display: inline-block;
@@ -1320,7 +1316,55 @@ h2:first-child {
         .section-gallery h2::before {
           top: 8rem; } }
   .section-gallery .btn {
+    position: relative;
+    display: block;
+    background: none center center no-repeat;
+    background-size: cover;
+    border: 2px solid #48596e;
+    opacity: .8;
+    font-family: "Gotham Book";
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: inherit;
+    font-size: 1.4rem;
+    color: #48596e;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding: 15px 10px;
+    text-align: center;
+    width: 19rem;
+    min-width: 19rem;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: border 1s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
     margin: 0 auto; }
+    .section-gallery .btn .mask {
+      position: absolute;
+      display: block;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.5);
+      width: 200px;
+      height: 100px;
+      -webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+      transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+      -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 2s cubic-bezier(0.19, 1, 0.22, 1); }
+    .section-gallery .btn:hover {
+      border-color: #55b7ff;
+      color: #ffffff;
+      background-color: #55b7ff;
+      -webkit-box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8);
+      box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8); }
+    .section-gallery .btn:hover .mask {
+      background: #ffffff;
+      opacity: .8;
+      -webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+      transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg); }
 
 .grid {
   display: -ms-grid;
@@ -1463,7 +1507,8 @@ h2:first-child {
       height: 8rem;
       width: 8rem;
       max-width: 8rem;
-      max-height: 8rem; }
+      max-height: 8rem;
+      opacity: 0; }
   .grid__img {
     width: 100%;
     height: 100%;
@@ -1471,16 +1516,17 @@ h2:first-child {
     min-height: 100%;
     -o-object-fit: cover;
     object-fit: cover; }
+    .grid__img:hover, .grid__img:focus, .grid__img:active {
+      -webkit-box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.5);
+      -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+      -o-transform: scale(1.01);
+      transform: scale(1.01); }
 
 .grid__item:hover img,
 .grid__item:focus img,
 .grid__item:active img {
-  -webkit-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
-  transform: scale(1.01);
-  -webkit-box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
   -webkit-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in; }
@@ -1488,7 +1534,11 @@ h2:first-child {
 .grid__item:hover .count,
 .grid__item:focus .count,
 .grid__item:active .count {
-  opacity: 0; }
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+  -ms-transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+  -o-transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+  transform: translate(-50%, -50%) rotate(360deg) scale(1.2); }
 
 .section-maps {
   padding: 0; }
@@ -1664,11 +1714,59 @@ h2:first-child {
   .form input[type="text"] {
     margin-top: 0; }
   .form .btn {
+    position: relative;
+    display: block;
+    background: none center center no-repeat;
+    background-size: cover;
+    border: 2px solid #48596e;
+    opacity: .8;
+    font-family: "Gotham Book";
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: inherit;
+    font-size: 1.4rem;
+    color: #48596e;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding: 15px 10px;
+    text-align: center;
+    width: 19rem;
+    min-width: 19rem;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: border 1s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: border 2s cubic-bezier(0.19, 1, 0.22, 1), color 0.6s cubic-bezier(0.19, 1, 0.22, 1), background 5s cubic-bezier(0.19, 1, 0.22, 1);
     margin: 4rem 0 0;
     -ms-flex-item-align: end;
     align-self: flex-end;
     width: 14rem;
     min-width: 14rem; }
+    .form .btn .mask {
+      position: absolute;
+      display: block;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.5);
+      width: 200px;
+      height: 100px;
+      -webkit-transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+      transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+      -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 2s cubic-bezier(0.19, 1, 0.22, 1); }
+    .form .btn:hover {
+      border-color: #55b7ff;
+      color: #ffffff;
+      background-color: #55b7ff;
+      -webkit-box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8);
+      box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8); }
+    .form .btn:hover .mask {
+      background: #ffffff;
+      opacity: .8;
+      -webkit-transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+      transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg); }
     @media screen and (max-width: 500px) {
       .form .btn {
         margin: 4rem auto; } }

@@ -28,6 +28,8 @@
     transform: translate(-50%, -50%);
 }
 
+// Миксины для адаптации
+
 @mixin desktop {
     @media screen and (max-width: 1200px) {
          @content;
@@ -52,42 +54,59 @@
     }
   }
 
-
+// Псевдоэлемент
  @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
     display: $display;
     position: $pos;
   }
 
-@mixin input-placeholder {
-    &.placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; }
-  }
+
+// Стиль всех кнопок
 
 @mixin btns { 
-  // .blob-btn {
-	//   display: block;
-	//   border: $b-size solid $text-dark;
-	//   outline: none;
-  //   width: 19rem;
-	//   min-width: 19rem;
-  //   @include font(1.4rem, $text-dark, 400, $btn-ff, 1.2);
-	//   text-align: center;
-	//   text-decoration: none;
-  //   text-transform: uppercase;
-  //   padding: 15px 10px;
-  //   margin-bottom: 6rem;
- 
-    // @include hover {
-    //   border: $b-size solid $text-data;
-    //   background-color: $text-data;
-    //   color: $text-light;
-    // }
+    position: relative;
+    display: block;
+    background: none center center no-repeat;
+    background-size: cover;
+    border: $b-size solid $color-btn;
+    opacity: .8;
+     @include font(1.4rem, $color-btn, 400, $btn-ff, 1.2);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding: 15px 10px;
+    text-align: center;
+    width: 19rem;
+    min-width: 19rem;
+     margin-bottom: 6rem;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
+    transition: border 2s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
+    .mask {
+        position: absolute;
+        display: block;
+        background: #fff;
+        background: rgba(255,255,255,0.5);
+        width: 200px;
+        height: 100px;
+        transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+        transition: all 2s cubic-bezier(0.19,1,.22,1);
+    }
+    &:hover {
+      border-color: $text-data;
+        color: $text-light;
+        background-color: $text-data;
+      box-shadow: 2px 2px 5px rgba(19, 18, 18, 0.8);
+    }
+    &:hover .mask {
+      background: $text-light;
+      opacity: .8;
+     transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+  }
 }
 
+//  Линии перед заголовком
 @mixin line {
   @include pseudo;
   width: 10rem;
@@ -101,7 +120,7 @@
   }
  }
 	
-
+// Миксины для заголовков и шрифтов
 @mixin title1 {
     @include font(8rem, $text-light, 700, $text-ff, 1.2);
     margin: 0;
