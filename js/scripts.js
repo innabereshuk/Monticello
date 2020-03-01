@@ -33,7 +33,7 @@ nextArrow: `<button class="mySlider__arrow mySlider__arrow--next">
             </button>`,
             responsive: [
     {
-        breakpoint: 865,
+        breakpoint: 1000,
         settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -43,10 +43,18 @@ nextArrow: `<button class="mySlider__arrow mySlider__arrow--next">
         breakpoint: 680,
         settings: {
             arrows: false,
-            slidesToShow: 1,
-            slidesToScroll: 2,
+            slidesToShow: 2,
+            slidesToScroll: 1,
         }
     },
+    {
+        breakpoint: 480,
+        settings: {
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    }
    
 ],
 
