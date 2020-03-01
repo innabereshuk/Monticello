@@ -47,7 +47,7 @@
         });
         
         
-        $.getJSON("map-styles.json", function(data) {
+        $.getJSON("mapstyles.json", function(data) {
             map.setOptions({styles: data});
         });
     }
