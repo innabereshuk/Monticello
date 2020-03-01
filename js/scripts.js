@@ -88,25 +88,6 @@ $(document).ready(function(){
         })
     })
 
-    let sections = document.querySelectorAll('.bg');
-    window.addEventListener('scroll', function() {
-
-        document.body.classList.remove('menu-opened');
-       
-        let firstViewportSection = null;
-        sections.forEach(function(section) {
-            let rect = section.getBoundingClientRect();
-
-            if (!firstViewportSection) {
-                if (rect.bottom  > 60) {
-                    firstViewportSection = section;
-                }
-            }
-
-        })
-   
-
-    }) 
-   
+      
 
 })();
