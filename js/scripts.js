@@ -4,27 +4,26 @@
     vertical: true,
     verticalSwiping: true,
     slidesToShow: 1,
-    autoplay: true,
+    slidesToScroll: 1,
     speed: 300,
-    arrows: false,
     autoplaySpeed: 4000,
+    autoplay: true,
     infinite: true,
     dots: true,
-    slidesToScroll: 1,
+    arrows: false,
 });
 
 
 $('.mySlider').slick({
-dots: true,
-infinite: true,
-dotsClass: 'slick-dots slick-dots-two',
-speed: 300,
 slidesToShow: 3,
 slidesToScroll: 1,
+autoplaySpeed: 4000,
+dots: true,
+infinite: true,
 infinite: true,
 autoplay: true,
-lazyLoad: 'ondemand',
-autoplaySpeed: 4000,
+dotsClass: 'slick-dots slick-dots-two',
+speed: 300,
 prevArrow: `<button class="mySlider__arrow mySlider__arrow--prev">
                 <i class="fas fa-chevron-left"></i>
             </button>`,
@@ -46,14 +45,16 @@ nextArrow: `<button class="mySlider__arrow mySlider__arrow--next">
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                     dots: false
+                    dots: true
                   }
                 },
                 {
                   breakpoint: 480,
                   settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
                   }
                 }
             ],

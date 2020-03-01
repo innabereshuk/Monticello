@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap');
 
 @import 'normalize';
 @import 'variables';
@@ -195,7 +195,7 @@ nav {
 .menu__link:hover:after,
 .menu__link:focus:after {
     width: 80%;
-    transform: translate(33%, 0);
+    transform: translate(35%, 0);
 }
 
 // Первый слайдер вертикальный
@@ -271,7 +271,7 @@ nav {
     &:hover,
     &:focus,
     &:active {
-       color: ragb(255, 255, 255, 1); 
+       color: rgba(255, 255, 255, 1); 
     }
    
 }
@@ -334,6 +334,9 @@ nav {
         &:first-child {
             margin-top: 4rem;
         }
+    }
+    h3 {
+        margin-bottom: 1rem;
     }
 
 .wrap {
@@ -515,8 +518,8 @@ nav {
                 p {
                     @include parag;
                     margin: 1rem 0;
-                    max-height: 11.8rem;
-                    overflow: hidden;
+                    // max-height: 11rem;
+                    // overflow: hidden;
                     letter-spacing: normal;
                 }
             }
@@ -536,7 +539,7 @@ nav {
                 @include font(2.2rem, $text-dark, 700, $text-ff, 1.3);
                 text-transform: uppercase;
                 padding: 1rem 0;
-                max-height: 10.6rem;
+                max-height: 15rem;
                 overflow: hidden;
                 @include phones {
                     font-size: 1.8rem;
@@ -562,11 +565,12 @@ nav {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+                    padding: 1rem 0;
                     &__name {
                         display: block;
                         @include subTitle-dark;
                         text-transform: uppercase;
-                        margin-bottom: .5rem;
+                        max-height: 2.52rem;
                     }
                     &__date {
                         @include font(1.4rem, $text-data, 500, $btn-ff, 1.3);
@@ -578,14 +582,24 @@ nav {
     
 }
 
-.post__link:hover img {
+.post__link:hover img,
+.post__link:focus img,
+.post__link:active img {
     transform: translate(-50%, -50%) scale(1.1);
     @include hover;
 }
-.post__author-link:hover img {
+.post__author-link:hover img,
+.post__author-link:focus img,
+.post__author-link:active img {
     transform: scale(1.1);
     box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, .5);
     @include hover;
+}
+
+.post__author-link:hover .author__name ,
+.post__author-link:focus .author__name,
+.post__author-link:active .author__name  {
+    color: $text-data;
 }
 
 // Второй слайдер горионтальный
@@ -604,6 +618,7 @@ nav {
     padding: 0;
     @include phones {
         left: 30%;
+        visibility: visible;
     }
 }
  .slick-dots-two li {
@@ -628,7 +643,7 @@ nav {
      &:hover,
      &:focus,
      &:active {
-        color: ragb(255, 255, 255, 1); 
+        color: rgba(255, 255, 255, 1); 
      }
     
  }
@@ -742,7 +757,7 @@ nav {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 24.56% 1fr 24.56% 1fr 1rem 1fr 24.56% 1fr 1rem 1fr 24.56%;
-    grid-template-columns: 2fr repeat(autofit, minmax(1fr));
+    grid-template-columns: 2fr repeat(2, 1fr);
     -ms-grid-rows: 1fr 1rem 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;

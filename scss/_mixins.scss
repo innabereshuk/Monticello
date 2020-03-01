@@ -123,19 +123,29 @@
 // Миксины для заголовков и шрифтов
 @mixin title1 {
     @include font(8rem, $text-light, 700, $text-ff, 1.2);
-    margin: 0;
+    margin: 0 3rem;
+    max-width: 1100px;
+    max-height: 28.8rem;
+    overflow: hidden;
     letter-spacing: 10px;
     text-transform: uppercase;
+    white-space: normal;
     @include laptop {
       font-size: 6.5rem;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
+      max-width: 900px;
+      max-height: 11.7rem;
     }
     @include tablets {
       font-size: 4.5rem;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      max-width: 700px;
+      max-height: 16.2rem;
     }
     @include phones {
       font-size: 3.5rem;
+      max-width: 400px;
+      max-height: 12.6rem;
    }
 }
 
@@ -170,6 +180,9 @@
 
 @mixin subTitle-light {
    @include font(1.8rem, $text-light, 400, $btn-ff, 1.4);
+   max-width: 1100px;
+   max-height: 58px;
+   overflow: hidden;
    @include tablets {
      font-size: 1.6rem;
    }
@@ -177,6 +190,9 @@
 
 @mixin subTitle-dark {
     @include font(1.8rem, $text-dark, 400, $btn-ff, 1.4);
+    max-width: 1100px;
+    max-height: 58px;
+    overflow: hidden;
     @include tablets {
       font-size: 1.6rem;
     }
