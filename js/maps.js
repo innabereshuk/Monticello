@@ -50,7 +50,10 @@
         $.getJSON("mapstyles.json", function(data) {
             map.setOptions({styles: data});
         });
+        
     }
+
+    
         
         
 

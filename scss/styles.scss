@@ -774,6 +774,8 @@ nav {
         position: relative;
         display: -ms-flexbox;
         display: flex;
+        cursor: pointer;
+        align-items: center;
         &:hover,
         &:focus,
         &:active {
@@ -894,7 +896,6 @@ nav {
         }
         .count {
             @include pCenter;
-            z-index: 2;
             height: 8rem;
             width: 8rem;
             max-width: 8rem;
@@ -902,6 +903,11 @@ nav {
             opacity: 0;
         }
         
+    }
+    &__panorama {
+        background-color: $text-light;
+        position: relative;
+        width: 100%;
     }
     &__img {
         width: 100%;
@@ -916,8 +922,16 @@ nav {
             transform: scale(1.01);
         }
     }
+    &__view {
+       @include pCenter;
+       object-fit: cover;
+    }
 }
 
+.invisible {
+    display: none;
+  }
+ 
 
 .grid__item:hover img,
 .grid__item:focus img,
@@ -1315,6 +1329,9 @@ footer {
     top: 0;
     transform: rotate(90deg);
 }
+
+
+
 
 
 

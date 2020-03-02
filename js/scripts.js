@@ -1,5 +1,15 @@
 
- $(document).ready(function(){
+
+let openBtn = document.querySelectorAll(".grid__panorama");
+
+     openBtn.forEach(el => {
+          el.addEventListener("click", function () {
+          el.children[2].classList.remove("invisible");
+      });
+    });
+
+   
+$(document).ready(function(){
     $('.slider').slick({
     vertical: true,
     verticalSwiping: true,
@@ -91,3 +101,4 @@ $(document).ready(function(){
       
 
 })();
+

@@ -28,10 +28,11 @@
                       <span></span>
                     </label>
                     <ul class="menu__box">
-                      <li><a class="menu__list" href="#about_Us">About Us</a></li>
-                      <li><a class="menu__list" href="#projects">projects</a></li>
-                      <li><a class="menu__list" href="#news">news</a></li>
-                      <li><a class="menu__list" href="#contact">contact</a></li>
+                         <li><a class="menu__list" href="#home">Home</a></li>
+                         <li><a class="menu__list" href="#about_Us">About Us</a></li>
+                         <li><a class="menu__list" href="#projects">projects</a></li>
+                         <li><a class="menu__list" href="#news">news</a></li>
+                        <li><a class="menu__list" href="#contact">contact</a></li>
                     </ul>
                   </div>
 
@@ -74,7 +75,7 @@
 
     <main>
 
-        <section class="section section__cover">
+        <section class="section section__cover" id="home">
             <div class="slider slick-vertical slick-track">
                 <div class="slide" style="background-image: url(image/bg1.png);">
                     <div class="container">
@@ -288,12 +289,22 @@
              <h2>gallery</h2>
              <div class="grid">
                  <div class="grid__item grid__item--big">
-                     <img class="grid__img" src="image/gallery1.jpg" alt="">
-                     <img class="count" src="image/360.png" alt="">
+                    <div class="grid__panorama">
+                         <img class="grid__img" src="image/gallery1.jpg" alt="">
+                         <img class="count" src="image/360.png" alt="">
+                         <div class="grid__iframe invisible">
+                            <iframe src="https://www.google.com/maps/embed?pb=!4v1583101980828!6m8!1m7!1sdEMXMccxMOvubUQh4sDoYw!2m2!1d42.92193604413541!2d-73.8752546729039!3f282.26337!4f0!5f0.7820865974627469" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" class="grid__view"></iframe>
+                         </div>
+                    </div>
                     </div>
                  <div class="grid__item grid__item--smoll">
-                     <img class="grid__img"  src="image/gallery2.jpg" alt="">
-                     <img class="count" src="image/360.png" alt="">
+                   <div class="grid__panorama">
+                         <img class="grid__img"  src="image/gallery2.jpg" alt="">
+                         <img class="count" src="image/360.png" alt="">
+                         <div class="grig__iframe invisible">
+                            <iframe src="https://www.google.com/maps/embed?pb=!4v1583108637511!6m8!1m7!1slisisTcu3v9-F8o04s6dyA!2m2!1d55.8329467545595!2d37.53310499335769!3f5.6210569855250405!4f-6.616812976165718!5f0.7820865974627469" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" class="grid__view"></iframe>
+                         </div>
+                   </div>
                     </div>
                  <div class="grid__item grid__item--smoll">
                      <img class="grid__img" src="image/gallery3.jpg" alt="">
@@ -384,8 +395,7 @@
         </div>
     </footer>
 
-
-
+    
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
