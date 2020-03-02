@@ -1,8 +1,8 @@
 
 
-let openBtn = document.querySelectorAll(".grid__panorama");
+let view = document.querySelectorAll(".grid__panorama");
 
-     openBtn.forEach(el => {
+     view.forEach(el => {
           el.addEventListener("click", function () {
           el.children[2].classList.remove("invisible");
       });
@@ -101,4 +101,6 @@ $(document).ready(function(){
       
 
 })();
+
+   
 
