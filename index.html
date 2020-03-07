@@ -11,9 +11,11 @@
     <title>Monticello</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://kenwheeler.github.io/slick/slick/slick-theme.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="top">
+    <!-- <a href="#top" class="top" onclick="ScrollUp();return!1;">UP</a> -->
    
     <header>
         <div class="container">
@@ -395,16 +397,38 @@
         </div>
     </footer>
 
+ <!-- <script>
+     function ScrollUp(){
+        var t,s;
+        s = document.body.scrollTop||window.pageYOffset;
+        t = setInterval(function(){
+            if(s > 0)window.scroll(0,s-=5);
+            else clearInterval(t)
+            },5);
+    }
+ </script> -->
+   <script>
+
+    let pics = document.querySelectorAll(".grid__panorama");
+
+     pics.forEach(function(el) {
+         el.addEventListener("click", function () {
+         el.children[2].classList.remove("invisible");
+    });
+  });
+
+  </script>
+
+ 
     
 
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/maps.js"></script>
 <script src="js/modernizr.min.js"></script>
-<script src="js/scripts.js"></script>  
 <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRL-a7eO0tyFj81gVMmDMOoKYfRH1mCyI&callback=initMap"
 async defer></script>
+<script src="js/scripts.js"></script>  
    
 </body>
 </html>

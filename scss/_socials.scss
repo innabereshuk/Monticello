@@ -1,7 +1,10 @@
 // Блок социальных сетей
 
 .socials {
+    display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
+    flex-basis: 15%;
     @include laptop {
         margin: 0;
     }
@@ -10,7 +13,7 @@
 .social {
     display: inline-block;
     margin: 0 10px;
-    flex: 0 1 33.33%;
+    flex: 1 1 33.33%;
     &__link {
         display: inline-block;
         text-decoration: none;

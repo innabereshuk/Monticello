@@ -1,13 +1,4 @@
 
-
-let view = document.querySelectorAll(".grid__panorama");
-
-     view.forEach(el => {
-          el.addEventListener("click", function () {
-          el.children[2].classList.remove("invisible");
-      });
-    });
-
    
 $(document).ready(function(){
     $('.slider').slick({

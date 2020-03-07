@@ -56,6 +56,36 @@ body {
     @include font(1.4rem, $text-dark, 400, $text-ff, 1.3);
 }
 
+// .top {
+//     display: block;
+//     position: fixed;
+//     z-index: 30;
+//     bottom: 30px;
+//     right: 30px;
+//     width: 50px;
+//     height: 50px;
+//     opacity: 0.5; 
+//     background-color: $text-light;
+//     border: 1px solid $text-light;
+//     box-shadow: 3px 3px 8px 0 rgba(3, 3, 3, 0.8);
+//     border-radius: 50%;
+//     color: $text-dark;
+//     text-transform: uppercase;
+//     padding: 15px 13px;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background-color: $color-btn;
+//         opacity: .5;
+//         border: 1px solid $color-btn;
+//         color: $text-light;
+//     }
+//     @include laptop {
+//         display: none;
+//     }
+// }
+
+
 
 .container {
     max-width: 1200px;
@@ -1156,8 +1186,10 @@ footer {
         flex-direction: column;
     }
     .socials {
-        display: block;
+        display: -ms-flexbox;
+        display: flex;
         margin-top: 2.5rem;
+        flex-basis: 25%;
     }
 }
 
@@ -1258,7 +1290,7 @@ footer {
     background-color: rgba(24, 24, 24, 0.9);
     box-shadow: 1px 2px 6px rgba(0, 0, 0, .2);
     @include phones {
-        top: -100;
+        top: -100%;
         left: 0;
         width: 100%;
         height: 80%;

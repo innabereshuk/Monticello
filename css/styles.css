@@ -311,9 +311,14 @@ template {
   display: none; }
 
 .socials {
-  display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-preferred-size: 15%;
+  flex-basis: 15%; }
   @media screen and (max-width: 1000px) {
     .socials {
       margin: 0; } }
@@ -321,9 +326,9 @@ template {
 .social {
   display: inline-block;
   margin: 0 10px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 33.33%;
-  flex: 0 1 33.33%; }
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33.33%;
+  flex: 1 1 33.33%; }
   .social__link {
     display: inline-block;
     text-decoration: none;
@@ -1890,8 +1895,12 @@ footer {
       -ms-flex-direction: column;
       flex-direction: column; } }
   .box .socials {
-    display: block;
-    margin-top: 2.5rem; }
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    margin-top: 2.5rem;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%; }
 
 .copy {
   font-family: "Gotham Book";
@@ -1991,7 +2000,7 @@ footer {
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2); }
   @media screen and (max-width: 500px) {
     .menu__box {
-      top: -100;
+      top: -100%;
       left: 0;
       width: 100%;
       height: 80%; } }
