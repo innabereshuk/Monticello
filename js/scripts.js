@@ -25,12 +25,12 @@ infinite: true,
 autoplay: true,
 dotsClass: 'slick-dots slick-dots-two',
 speed: 300,
-prevArrow: `<button class="mySlider__arrow mySlider__arrow--prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>`,
-nextArrow: `<button class="mySlider__arrow mySlider__arrow--next">
-                <i class="fas fa-chevron-right"></i>
-            </button>`,
+prevArrow: '<button class="mySlider__arrow mySlider__arrow--prev">' +
+                '<i class="fas fa-chevron-left"></i>' +
+            '</button>',
+nextArrow:'<button class="mySlider__arrow mySlider__arrow--next">' +
+                '<i class="fas fa-chevron-right"></i>' +
+            '</button>',
             responsive: [
                 {
                   breakpoint: 1024,
@@ -83,7 +83,7 @@ $(document).ready(function(){
 
     let links = document.querySelectorAll('.menu__list');
 
-    links.forEach(link => {
+    links.forEach(function(link) {
         link.addEventListener('click', function() {
             document.body.classList.remove('menu-opened');
         })

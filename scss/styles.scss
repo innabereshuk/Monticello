@@ -85,13 +85,14 @@ body {
 //     }
 // }
 
-
+   
 
 .container {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
     padding: 0 1.5rem;
+   
 }
 
 h1 {
@@ -165,7 +166,7 @@ nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-basis: 50%;
     text-align: center;
     @include laptop {
@@ -470,6 +471,7 @@ nav {
         p {
             @include parag;
             padding: 4rem 0;
+            max-height: 160px;
 
         }
         .btn {
@@ -547,6 +549,8 @@ nav {
                 text-align: start;
                 p {
                     @include parag;
+                    max-height: 50px;
+                    overflow: hidden;
                     margin: 1rem 0;
                     // max-height: 11rem;
                     // overflow: hidden;
@@ -960,8 +964,31 @@ nav {
 
 .invisible {
     display: none;
-  }
- 
+}
+
+// .panorama-close {
+//     width: 80px;
+//     display: block;
+//     height: 30px;
+//     background-color: $color-btn;
+//     position: absolute;
+//     top: 0;
+//     padding: 5px;
+//     left: 50%;
+//     transform: translate(-50%, 20%);
+//     outline: none;
+//     color: $text-light;
+//     font-size: 1rem;
+//     border: $b-size solid $text-p;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         color: $text-p;
+//         background-color: $text-light;
+//         border: $b-size solid rgb(182, 186, 189);
+//     }
+// }
+
 
 .grid__item:hover img,
 .grid__item:focus img,

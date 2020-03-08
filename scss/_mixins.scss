@@ -181,8 +181,6 @@
 @mixin subTitle-light {
    @include font(1.8rem, $text-light, 400, $btn-ff, 1.4);
    max-width: 1100px;
-   max-height: 58px;
-   overflow: hidden;
    @include tablets {
      font-size: 1.6rem;
    }
@@ -191,8 +189,6 @@
 @mixin subTitle-dark {
     @include font(1.8rem, $text-dark, 400, $btn-ff, 1.4);
     max-width: 1100px;
-    max-height: 58px;
-    overflow: hidden;
     @include tablets {
       font-size: 1.6rem;
     }
@@ -200,6 +196,7 @@
 
 @mixin parag {
   @include font(1.8rem, $text-dark, 400, $parag-ff, 1.3);
+  max-width: 1100px;
   @include tablets {
     font-size: 1.6rem;
   }
