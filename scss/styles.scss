@@ -549,7 +549,7 @@ nav {
                 text-align: start;
                 p {
                     @include parag;
-                    max-height: 50px;
+                    max-height: 43px;
                     overflow: hidden;
                     margin: 1rem 0;
                     // max-height: 11rem;
@@ -966,28 +966,28 @@ nav {
     display: none;
 }
 
-// .panorama-close {
-//     width: 80px;
-//     display: block;
-//     height: 30px;
-//     background-color: $color-btn;
-//     position: absolute;
-//     top: 0;
-//     padding: 5px;
-//     left: 50%;
-//     transform: translate(-50%, 20%);
-//     outline: none;
-//     color: $text-light;
-//     font-size: 1rem;
-//     border: $b-size solid $text-p;
-//     &:hover,
-//     &:focus,
-//     &:active {
-//         color: $text-p;
-//         background-color: $text-light;
-//         border: $b-size solid rgb(182, 186, 189);
-//     }
-// }
+.panorama-close {
+    display: block;
+    width: 40px;
+    height: 25px;
+    background-color: #b3b3b3;
+    position: absolute;
+    top: 0;
+    padding: 3px;
+    left: 60%;
+    text-transform: uppercase;
+    outline: none;
+    color: $text-light;
+    font-size: 1rem;
+    border: $b-size solid rgb(121, 119, 119);
+    &:hover,
+    &:focus,
+    &:active {
+        color: $text-p;
+        background-color: $text-light;
+        border: $b-size solid rgb(182, 186, 189);
+    }
+}
 
 
 .grid__item:hover img,
@@ -1142,10 +1142,18 @@ nav {
         height: 6rem;
         margin-top: 2rem;
     }
-    input[type="text"] {
-        margin-top: 0;
+    input:focus:invalid {
+        border-bottom: 1px solid rgb(98, 2, 2);
+        
+      }
+      
+    input:valid {
+        border-bottom: 1px solid blue;
+      }
+    input:invalid {
+        border-bottom: $b-size solid rgba(111, 119, 129, .9);
     }
-   .btn{
+    .btn{
        @include btns;
         margin: 4rem 0 0;
         align-self: flex-end;

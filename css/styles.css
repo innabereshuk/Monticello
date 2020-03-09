@@ -1032,7 +1032,7 @@ h3 {
           font-size: 1.8rem;
           color: #2c4058;
           max-width: 1100px;
-          max-height: 50px;
+          max-height: 43px;
           overflow: hidden;
           margin: 1rem 0;
           letter-spacing: normal; }
@@ -1583,6 +1583,25 @@ h3 {
 .invisible {
   display: none; }
 
+.panorama-close {
+  display: block;
+  width: 40px;
+  height: 25px;
+  background-color: #b3b3b3;
+  position: absolute;
+  top: 0;
+  padding: 3px;
+  left: 60%;
+  text-transform: uppercase;
+  outline: none;
+  color: #ffffff;
+  font-size: 1rem;
+  border: 2px solid #797777; }
+  .panorama-close:hover, .panorama-close:focus, .panorama-close:active {
+    color: #6f7781;
+    background-color: #ffffff;
+    border: 2px solid #b6babd; }
+
 .grid__item:hover img,
 .grid__item:focus img,
 .grid__item:active img {
@@ -1772,8 +1791,12 @@ h3 {
     width: 100%;
     height: 6rem;
     margin-top: 2rem; }
-  .form input[type="text"] {
-    margin-top: 0; }
+  .form input:focus:invalid {
+    border-bottom: 1px solid #620202; }
+  .form input:valid {
+    border-bottom: 1px solid blue; }
+  .form input:invalid {
+    border-bottom: 2px solid rgba(111, 119, 129, 0.9); }
   .form .btn {
     position: relative;
     display: block;
