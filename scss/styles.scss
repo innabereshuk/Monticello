@@ -81,7 +81,7 @@ body {
         border: 1px solid $color-btn;
         color: $text-light;
     }
-    @include laptop {
+    @include phones {
         display: none;
     }
 }
@@ -139,22 +139,21 @@ header {
 
 .hamburger-menu {
     display: none;
-    position: relative;
     @include laptop {
         display: block;
     }
     &__socials {
-        display: none;
+        visibility: hidden;
         @include tablets {
-            display: block;
+            visibility: visible;
             position: absolute;
-            left: 0;
-            bottom: 10%;
+            bottom: 20%;
             right: 0;
+            left: 0;
         }
-        
     }
 }
+
 
 
 nav {
@@ -175,6 +174,9 @@ nav {
     .socials {
         @include laptop {
             margin: 0 auto;
+        }
+        @include tablets {
+            display: none;
         }
     }
 }
@@ -502,9 +504,6 @@ nav {
                 min-width: 100%;
                 min-height: 100%;
             }
-            // &__text-cont {
-            //     padding-bottom:200px;
-            // }
             &__title {
                 @include font(2.2rem, $text-dark, 700, $text-ff, 1.3);
                 text-transform: uppercase;
@@ -1147,6 +1146,11 @@ footer {
     text-align: center;
     background-color: rgba(24, 24, 24, 0.9);
     box-shadow: 1px 2px 6px rgba(0, 0, 0, .2);
+    @include tablets {
+        .socials {
+            display: block;
+        }
+    }
     @include phones {
         top: -100%;
         left: 0;
@@ -1160,7 +1164,7 @@ footer {
     padding: 2rem 2.4rem;
     @include title2;
     color: $text-light;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
     @include phones {

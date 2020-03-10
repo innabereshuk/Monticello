@@ -318,9 +318,6 @@ template {
   justify-content: space-between;
   -ms-flex-preferred-size: 15%;
   flex-basis: 15%; }
-  @media screen and (max-width: 800px) {
-    .socials {
-      display: none; } }
 
 .social {
   display: inline-block;
@@ -806,7 +803,7 @@ body {
     opacity: .5;
     border: 1px solid #48596e;
     color: #ffffff; }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 500px) {
     .top {
       display: none; } }
 
@@ -907,20 +904,19 @@ header {
   z-index: 10; }
 
 .hamburger-menu {
-  display: none;
-  position: relative; }
+  display: none; }
   @media screen and (max-width: 1000px) {
     .hamburger-menu {
       display: block; } }
   .hamburger-menu__socials {
-    display: none; }
+    visibility: hidden; }
     @media screen and (max-width: 800px) {
       .hamburger-menu__socials {
-        display: block;
+        visibility: visible;
         position: absolute;
-        left: 0;
-        bottom: 10%;
-        right: 0; } }
+        bottom: 20%;
+        right: 0;
+        left: 0; } }
 
 nav {
   display: -ms-flexbox;
@@ -949,6 +945,9 @@ nav {
   @media screen and (max-width: 1000px) {
     nav .socials {
       margin: 0 auto; } }
+  @media screen and (max-width: 800px) {
+    nav .socials {
+      display: none; } }
 
 .menu {
   display: -ms-flexbox;
@@ -2185,6 +2184,9 @@ footer {
   background-color: rgba(24, 24, 24, 0.9);
   -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2); }
+  @media screen and (max-width: 800px) {
+    .menu__box .socials {
+      display: block; } }
   @media screen and (max-width: 500px) {
     .menu__box {
       top: -100%;
@@ -2203,7 +2205,7 @@ footer {
   color: #2c4058;
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase; }
   @media screen and (max-width: 1000px) {
