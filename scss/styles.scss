@@ -56,34 +56,34 @@ body {
     @include font(1.4rem, $text-dark, 400, $text-ff, 1.3);
 }
 
-// .top {
-//     display: block;
-//     position: fixed;
-//     z-index: 30;
-//     bottom: 30px;
-//     right: 30px;
-//     width: 50px;
-//     height: 50px;
-//     opacity: 0.5; 
-//     background-color: $text-light;
-//     border: 1px solid $text-light;
-//     box-shadow: 3px 3px 8px 0 rgba(3, 3, 3, 0.8);
-//     border-radius: 50%;
-//     color: $text-dark;
-//     text-transform: uppercase;
-//     padding: 15px 13px;
-//     &:hover,
-//     &:focus,
-//     &:active {
-//         background-color: $color-btn;
-//         opacity: .5;
-//         border: 1px solid $color-btn;
-//         color: $text-light;
-//     }
-//     @include laptop {
-//         display: none;
-//     }
-// }
+.top {
+    display: block;
+    position: fixed;
+    z-index: 30;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5; 
+    background-color: $text-light;
+    border: 1px solid $text-light;
+    box-shadow: 3px 3px 8px 0 rgba(3, 3, 3, 0.8);
+    border-radius: 50%;
+    color: $text-dark;
+    text-transform: uppercase;
+    padding: 15px 13px;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $color-btn;
+        opacity: .5;
+        border: 1px solid $color-btn;
+        color: $text-light;
+    }
+    @include laptop {
+        display: none;
+    }
+}
 
    
 
@@ -389,7 +389,7 @@ nav {
         @include tablets {
             margin-bottom: 10rem;
         }
-        picture {
+        .picture {
             -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=317, Color=#55B7FF)";/*IE 8*/
             -moz-box-shadow: -216px -70px 0 #55B7FF;/*FF 3.5+*/
             -webkit-box-shadow: -216px -70px 0 #55B7FF;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
@@ -405,7 +405,7 @@ nav {
                 box-shadow: 156px -50px 0 #55B7FF;
             }
             @include phones {
-                box-shadow: 126px -70px 0 #7E5AFF;
+                box-shadow: 126px -70px 0 #55B7FF;
              
            }
         }
@@ -415,7 +415,7 @@ nav {
         @include tablets {
             flex-direction: column;
         }
-        picture {
+        .picture {
             -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=223, Color=#7E5AFF)";/*IE 8*/
             -moz-box-shadow: 216px -70px 0 #7E5AFF;/*FF 3.5+*/
             -webkit-box-shadow: 216px -70px 0 #7E5AFF;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
@@ -960,6 +960,12 @@ nav {
     &__view {
        @include pCenter;
     }
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .invisible {
