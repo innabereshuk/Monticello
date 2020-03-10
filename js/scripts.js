@@ -16,19 +16,20 @@ $(document).ready(function(){
 
 
 $('.mySlider').slick({
-slidesToShow: 3,
-slidesToScroll: 1,
-autoplaySpeed: 4000,
-dots: true,
-infinite: true,
-infinite: true,
-autoplay: true,
-dotsClass: 'slick-dots slick-dots-two',
-speed: 300,
-prevArrow: '<button class="mySlider__arrow mySlider__arrow--prev">' +
-                '<i class="fas fa-chevron-left"></i>' +
-            '</button>',
-nextArrow:'<button class="mySlider__arrow mySlider__arrow--next">' +
+    horizontal: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplaySpeed: 4000,
+    dots: true,
+    infinite: true,
+    infinite: true,
+    autoplay: true,
+    dotsClass: 'slick-dots-two',
+    speed: 300,
+    prevArrow: '<button class="mySlider__arrow mySlider__arrow--prev">' +
+                    '<i class="fas fa-chevron-left"></i>' +
+                '</button>',
+    nextArrow:'<button class="mySlider__arrow mySlider__arrow--next">' +
                 '<i class="fas fa-chevron-right"></i>' +
             '</button>',
             responsive: [
@@ -64,8 +65,10 @@ nextArrow:'<button class="mySlider__arrow mySlider__arrow--next">' +
 
 });
 
+
+
 $(document).ready(function(){
-   $("body").on("click","a", function (event) {
+   $("body").on("click",('a[href^="#"]'), function (event) {
        event.preventDefault();
        var id  = $(this).attr('href'),
            top = $(id).offset().top;
@@ -89,6 +92,7 @@ $(document).ready(function(){
         })
     })
 
+  
 })();
 
 
@@ -99,7 +103,7 @@ function ScrollUp(){
       if(s > 0)window.scroll(0,s-=5);
       else clearInterval(t)
       },1);
-};
+}
 
    
 
