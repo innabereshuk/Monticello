@@ -139,8 +139,20 @@ header {
 
 .hamburger-menu {
     display: none;
+    position: relative;
     @include laptop {
         display: block;
+    }
+    &__socials {
+        display: none;
+        @include tablets {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 10%;
+            right: 0;
+        }
+        
     }
 }
 
@@ -159,6 +171,11 @@ nav {
     }
     @include phones {
         padding: 5.5rem 0; 
+    }
+    .socials {
+        @include laptop {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -233,42 +250,6 @@ nav {
 // Первый слайдер вертикальный
 
 
-.slider {
-    background: -moz-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* FF3.6+ */
-    background: -webkit-gradient(linear, 53deg, color-stop(10%, 55B7FF), color-stop(67%, 7E5AFF));/* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* Opera 11.10+ */
-    background: -ms-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-    background: linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* W3C */
-    position: relative;
-    height: 100%;
-}
-
-
-.slide {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    .container {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        p {
-            @include subTitle-light;
-            text-transform: uppercase;
-            margin-top: 2rem;
-            letter-spacing: 7px;
-            @include tablets {
-                letter-spacing: 4px;
-            }
-        }
-    }
-}
 
 
 .scroll {
@@ -420,8 +401,7 @@ nav {
         p {
             @include parag;
             padding: 4rem 0;
-            max-height: 160px;
-
+        
         }
         .btn {
             @include btns;
@@ -499,12 +479,15 @@ nav {
                 outline: none;
                 p {
                     @include parag;
-                    max-height: 43px;
+                    max-height: 66px;
                     overflow: hidden;
                     margin: 1rem 0;
                     // max-height: 11rem;
                     // overflow: hidden;
                     letter-spacing: normal;
+                    @include tablets {
+                        max-height: 63px;
+                    }
                 }
             }
             &__img-wrap {
@@ -519,11 +502,15 @@ nav {
                 min-width: 100%;
                 min-height: 100%;
             }
+            // &__text-cont {
+            //     padding-bottom:200px;
+            // }
             &__title {
                 @include font(2.2rem, $text-dark, 700, $text-ff, 1.3);
                 text-transform: uppercase;
-                padding: 1rem 0;
-                max-height: 15rem;
+                width: 100%;
+                padding: 0;
+                max-height: 9rem;
                 overflow: hidden;
                 @include phones {
                     font-size: 1.8rem;
@@ -534,13 +521,13 @@ nav {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                margin: 3rem 2rem;
+                margin: 1rem 2rem 3rem;
                 display: flex;
                 align-items: center;
                 outline: none;
                 img {
                     display: block;
-                    width: 60px;
+                    min-width: 60px;
                     height: 60px;
                     border-radius: 50%;
                     overflow: hidden;
@@ -550,12 +537,13 @@ nav {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    padding: 1rem 0;
+                    padding: 0;
                     &__name {
                         display: block;
                         @include subTitle-dark;
                         text-transform: uppercase;
-                        max-height: 2.52rem;
+                        max-height: 5rem;
+                        text-align: start;
                     }
                     &__date {
                         @include font(1.4rem, $text-data, 500, $btn-ff, 1.3);

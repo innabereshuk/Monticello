@@ -318,9 +318,9 @@ template {
   justify-content: space-between;
   -ms-flex-preferred-size: 15%;
   flex-basis: 15%; }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 800px) {
     .socials {
-      margin: 0; } }
+      display: none; } }
 
 .social {
   display: inline-block;
@@ -424,6 +424,61 @@ template {
     [dir="rtl"] .slick-next:before {
       content: "←"; }
 
+.slider {
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  /* for IE */
+  background: -o-linear-gradient(37deg, #55B7FF 10%, #7E5AFF 67%);
+  background: linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
+  /* W3C */
+  position: relative;
+  height: 100%; }
+
+.slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .slide .container {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .slide .container p {
+      font-family: "Gotham Book";
+      font-weight: 400;
+      line-height: 1.4;
+      font-style: inherit;
+      font-size: 1.8rem;
+      color: #ffffff;
+      max-width: 1100px;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      letter-spacing: 7px; }
+      @media screen and (max-width: 800px) {
+        .slide .container p {
+          font-size: 1.6rem; } }
+      @media screen and (max-width: 800px) {
+        .slide .container p {
+          letter-spacing: 4px; } }
+
 /* Dots */
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
@@ -444,7 +499,7 @@ template {
   margin: 0;
   width: 100%;
   list-style: none; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     .slick-dots {
       visibility: hidden; } }
   .slick-dots li {
@@ -780,7 +835,7 @@ h1 {
       font-size: 6.5rem;
       letter-spacing: 5px;
       max-width: 900px;
-      max-height: 11.7rem; } }
+      max-height: 14.7rem; } }
   @media screen and (max-width: 800px) {
     h1 {
       font-size: 4.5rem;
@@ -803,7 +858,7 @@ h2 {
   text-transform: uppercase; }
   @media screen and (max-width: 1000px) {
     h2 {
-      font-size: 3.6rem; } }
+      font-size: 3.2rem; } }
   @media screen and (max-width: 800px) {
     h2 {
       font-size: 2.8rem; } }
@@ -821,10 +876,10 @@ h3 {
   text-transform: uppercase; }
   @media screen and (max-width: 1000px) {
     h3 {
-      font-size: 2rem; } }
+      font-size: 1.8rem; } }
   @media screen and (max-width: 800px) {
     h3 {
-      font-size: 2rem; } }
+      font-size: 1.8rem; } }
   @media screen and (max-width: 500px) {
     h3 {
       font-size: 1.8rem; } }
@@ -852,10 +907,20 @@ header {
   z-index: 10; }
 
 .hamburger-menu {
-  display: none; }
+  display: none;
+  position: relative; }
   @media screen and (max-width: 1000px) {
     .hamburger-menu {
       display: block; } }
+  .hamburger-menu__socials {
+    display: none; }
+    @media screen and (max-width: 800px) {
+      .hamburger-menu__socials {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+        right: 0; } }
 
 nav {
   display: -ms-flexbox;
@@ -881,6 +946,9 @@ nav {
   @media screen and (max-width: 500px) {
     nav {
       padding: 5.5rem 0; } }
+  @media screen and (max-width: 1000px) {
+    nav .socials {
+      margin: 0 auto; } }
 
 .menu {
   display: -ms-flexbox;
@@ -962,61 +1030,6 @@ nav {
   -ms-transform: translate(35%, 0);
   -o-transform: translate(35%, 0);
   transform: translate(35%, 0); }
-
-.slider {
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
-  /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
-  /* for IE */
-  background: -o-linear-gradient(37deg, #55B7FF 10%, #7E5AFF 67%);
-  background: linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);
-  /* W3C */
-  position: relative;
-  height: 100%; }
-
-.slide {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center; }
-  .slide .container {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .slide .container p {
-      font-family: "Gotham Book";
-      font-weight: 400;
-      line-height: 1.4;
-      font-style: inherit;
-      font-size: 1.8rem;
-      color: #ffffff;
-      max-width: 1100px;
-      text-transform: uppercase;
-      margin-top: 2rem;
-      letter-spacing: 7px; }
-      @media screen and (max-width: 800px) {
-        .slide .container p {
-          font-size: 1.6rem; } }
-      @media screen and (max-width: 800px) {
-        .slide .container p {
-          letter-spacing: 4px; } }
 
 .scroll {
   position: fixed;
@@ -1204,8 +1217,7 @@ h3 {
       font-size: 1.8rem;
       color: #2c4058;
       max-width: 1100px;
-      padding: 4rem 0;
-      max-height: 160px; }
+      padding: 4rem 0; }
       @media screen and (max-width: 800px) {
         .infoBlock__text p {
           font-size: 1.6rem; } }
@@ -1345,13 +1357,16 @@ h3 {
           font-size: 1.8rem;
           color: #2c4058;
           max-width: 1100px;
-          max-height: 43px;
+          max-height: 66px;
           overflow: hidden;
           margin: 1rem 0;
           letter-spacing: normal; }
           @media screen and (max-width: 800px) {
             .flex__item .post__link p {
               font-size: 1.6rem; } }
+          @media screen and (max-width: 800px) {
+            .flex__item .post__link p {
+              max-height: 63px; } }
       .flex__item .post__img-wrap {
         position: relative;
         height: 47.5%;
@@ -1376,8 +1391,9 @@ h3 {
         font-size: 2.2rem;
         color: #2c4058;
         text-transform: uppercase;
-        padding: 1rem 0;
-        max-height: 15rem;
+        width: 100%;
+        padding: 0;
+        max-height: 9rem;
         overflow: hidden; }
         @media screen and (max-width: 500px) {
           .flex__item .post__title {
@@ -1387,7 +1403,7 @@ h3 {
         left: 0;
         right: 0;
         bottom: 0;
-        margin: 3rem 2rem;
+        margin: 1rem 2rem 3rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1397,7 +1413,7 @@ h3 {
         outline: none; }
         .flex__item .post__author-link img {
           display: block;
-          width: 60px;
+          min-width: 60px;
           height: 60px;
           border-radius: 50%;
           overflow: hidden;
@@ -1413,7 +1429,7 @@ h3 {
           -webkit-box-align: start;
           -ms-flex-align: start;
           align-items: flex-start;
-          padding: 1rem 0; }
+          padding: 0; }
           .flex__item .post__author-link .author__name {
             display: block;
             font-family: "Gotham Book";
@@ -1424,7 +1440,8 @@ h3 {
             color: #2c4058;
             max-width: 1100px;
             text-transform: uppercase;
-            max-height: 2.52rem; }
+            max-height: 5rem;
+            text-align: start; }
             @media screen and (max-width: 800px) {
               .flex__item .post__author-link .author__name {
                 font-size: 1.6rem; } }
@@ -2191,7 +2208,7 @@ footer {
   text-transform: uppercase; }
   @media screen and (max-width: 1000px) {
     .menu__list {
-      font-size: 3.6rem; } }
+      font-size: 3.2rem; } }
   @media screen and (max-width: 800px) {
     .menu__list {
       font-size: 2.8rem; } }

@@ -34,7 +34,7 @@ $('.mySlider').slick({
             '</button>',
             responsive: [
                 {
-                  breakpoint: 1024,
+                  breakpoint: 1100,
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -43,7 +43,7 @@ $('.mySlider').slick({
                   }
                 },
                 {
-                  breakpoint: 780,
+                  breakpoint: 945,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -51,7 +51,18 @@ $('.mySlider').slick({
                   }
                 },
                 {
-                  breakpoint: 480,
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                     centerPadding: '30px',
+                     arrows: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 420,
                   settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

@@ -134,7 +134,7 @@
       font-size: 6.5rem;
       letter-spacing: 5px;
       max-width: 900px;
-      max-height: 11.7rem;
+      max-height: 14.7rem;
     }
     @include tablets {
       font-size: 4.5rem;
@@ -153,7 +153,7 @@
   @include font(4.4rem, $text-dark, 700, $text-ff, 1.2);
   text-transform: uppercase;
   @include laptop {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
   @include tablets {
     font-size: 2.8rem;
@@ -168,10 +168,10 @@
   @include font(2.2rem, $text-dark, 400, $btn-ff, 1.2);
    text-transform: uppercase;
    @include laptop {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   @include tablets {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   @include phones {
     font-size: 1.8rem;

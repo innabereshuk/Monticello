@@ -5,10 +5,10 @@
     display: flex;
     justify-content: space-between;
     flex-basis: 15%;
-    @include laptop {
-        margin: 0;
+    @include tablets {
+        display: none;
     }
-}
+  }
 
 .social {
     display: inline-block;

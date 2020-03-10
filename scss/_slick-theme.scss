@@ -128,6 +128,44 @@ $slick-opacity-not-active: 0.55 !default;
     }
 }
 
+.slider {
+    background: -moz-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* FF3.6+ */
+    background: -webkit-gradient(linear, 53deg, color-stop(10%, 55B7FF), color-stop(67%, 7E5AFF));/* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* Opera 11.10+ */
+    background: -ms-linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+    background: linear-gradient(53deg, #55B7FF 10%, #7E5AFF 67%);/* W3C */
+    position: relative;
+    height: 100%;
+}
+
+
+.slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            @include subTitle-light;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            letter-spacing: 7px;
+            @include tablets {
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+
 /* Dots */
 
 .slick-dotted.slick-slider {
@@ -145,7 +183,7 @@ $slick-opacity-not-active: 0.55 !default;
     margin: 0;
     width: 100%;
     list-style: none;
-    @include phones {
+    @include tablets {
        visibility: hidden;
     }
      li {
@@ -283,7 +321,8 @@ $slick-opacity-not-active: 0.55 !default;
         .slick-next,
         .slick-prev,
         .slick-arrow {
-          visibility: hidden; }
+          visibility: hidden; 
+        }
         
          .mySlider__arrow {
             visibility: visible;
